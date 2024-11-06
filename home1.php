@@ -37,7 +37,7 @@ if ($_SESSION['user_type'] !== 'consultant' && basename(__FILE__) === 'home2.php
         <div class="right">
             <img src="https://cdn-icons-png.flaticon.com/512/147/147142.png" alt="User Icon" class="user-icon" id="user-icon">
             <div class="dropdown" id="dropdown-menu">
-                <a href="#">View Profile</a>
+                <a href="Profile.php">View Profile</a>
                 <a href="logout.php">Logout</a>
             </div>
         </div>

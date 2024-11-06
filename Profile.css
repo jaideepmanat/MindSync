@@ -1,0 +1,153 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body, html {
+    height: 100%;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #1e1e1e;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 80px; /* Default padding */
+    min-height: 100vh;
+}
+
+/* Navbar */
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 25px;
+    background-color: #0a0a0a;
+    z-index: 1000;
+}
+
+nav .left h1 {
+    color: #00ff00;
+}
+
+nav .right {
+    position: relative;
+}
+
+nav .right .user-icon {
+    width: 40px;
+    cursor: pointer;
+}
+
+nav .right .dropdown {
+    display: none;
+    position: absolute;
+    top: 50px;
+    right: 0;
+    background-color: #333;
+    padding: 10px;
+    border-radius: 5px;
+    width: 150px;
+}
+
+nav .right .dropdown a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    display: block;
+    padding: 5px 0;
+}
+
+nav .right .dropdown a:hover {
+    color: #00ff00;
+}
+
+body {
+    font-family:'Times New Roman', Times, serif;
+    background-color: #1e1e1e;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+.card {
+    background-color: #262626;
+    align-items: center;
+    padding: 20px; /* Increased padding */
+    border-radius: 10px;
+    box-shadow: 0 0px 10px rgba(0, 255, 0, 0.5);
+    text-align: center;
+    max-width: 600px; /* Increased width */
+    width: 90%;
+    border: 1px solid #5c5d5c;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 25px rgba(0, 255, 0, 0.5);
+}
+
+.profile-layout {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    text-align: left;
+}
+
+.profile-icon {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+.profile-details {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.profile-details h2 {
+    margin-bottom: 10px;
+    text-align: center; /* Center-aligns the name */
+}
+
+.credentials {
+    font-family: 'Times New Roman', Times, serif;
+    width: 150px; /* Set a fixed width for labels to align items properly */
+    padding-right: 10px; /* Adds space between label and text */
+    text-align: right; /* Right-aligns the label for better readability */
+}
+
+.consultant-area-info, .email-info, .Phn-no-info, .user-type-info {
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.consultant-area, .mailid, .Phn-no, .user-type {
+    flex-grow: 1; /* Ensures the text spans to the right of the label */
+    padding-left: 10px;
+    white-space: nowrap; /* Prevents text wrapping to the next line */
+}
+
+
+/* Responsive Adjustments */
+@media (max-width: 600px) {
+    body {
+        padding-top: 100px; /* Adjusted for mobile */
+    }
+}
+
+@media (min-width: 601px) and (max-width: 1200px) {
+    body {
+        padding-top: 100px; /* Adjusted for tablets */
+    }
+}

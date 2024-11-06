@@ -41,11 +41,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['question_text'])) {
     exit();
 }
 
-// Fetch questions and their answers
-$sql = "SELECT questions.id AS question_id, questions.question_text, users.name AS user_name
-        FROM questions
-        JOIN users ON questions.user_id = users.id
-        ORDER BY questions.created_at DESC";
+// Fetch questions and their replies
+$sql = "SELECT q.id AS question_id, q.question_text, 
+               IFNULL(r.reply_text, 'Not replied yet') AS reply_text 
+        FROM questions q
+        LEFT JOIN replies r ON q.id = r.question_id
+        ORDER BY q.created_at DESC";
+
 $result = $conn->query($sql);
 
 $questions = [];
@@ -75,7 +77,8 @@ $conn->close();
         <div class="right">
             <img src="https://cdn-icons-png.flaticon.com/512/147/147142.png" alt="User Icon" class="user-icon" id="user-icon">
             <div class="dropdown" id="dropdown-menu">
-                <a href="#">View Profile</a>
+                <a href="home1.php">Home</a>
+                <a href="Profile.php">View Profile</a>
                 <a href="logout.php">Logout</a>
             </div>
         </div>
@@ -90,7 +93,7 @@ $conn->close();
             <div class="question">
                 <h3><?php echo htmlspecialchars($question['question_text']); ?></h3>
                 <div class="reply">
-                    <p>Posted by: Anonymous</p>
+                    <p><?php echo htmlspecialchars($question['reply_text']); ?></p>
                 </div>
             </div>
         <?php endforeach; ?>

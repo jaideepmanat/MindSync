@@ -32,3 +32,9 @@ window.addEventListener('click', function(event) {
         dropdownMenu.style.display = "none";
     }
 });
+
+window.addEventListener("load", function() {
+    document.body.classList.add("slide-in");
+});
+
+
