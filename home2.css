@@ -31,12 +31,28 @@ nav .left h1 {
 }
 
 nav .right {
+    display: flex;
     position: relative;
+}
+
+nav .right .mailbox {
+    font-size: 30px;
+    margin-right: 25px; 
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+nav .right .mailbox :hover{
+    color: #00ff00e3;
+
 }
 
 nav .right .user-icon {
     width: 40px;
     cursor: pointer;
+}
+nav .right .mailbox :hover{
+    color: #00ff00e3;
+
 }
 
 nav .right .dropdown {

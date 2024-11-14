@@ -1,22 +1,8 @@
-// Motivational Quotes
-const quotes = [
-    "Believe you can and you're halfway there.",
-    "Your limitation—it’s only your imagination.",
-    "Push yourself, because no one else is going to do it for you.",
-    "Success doesn’t just find you. You have to go out and get it.",
-    "Great things never come from comfort zones."
-];
-
-window.onload = function() {
-    const quoteElement = document.getElementById('quote');
-    const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
-    quoteElement.textContent = randomQuote;
-};
-
 // Dropdown Toggle on Click
 const userIcon = document.getElementById('user-icon');
 const dropdownMenu = document.getElementById('dropdown-menu');
 
+// Toggle dropdown menu on user icon click
 userIcon.addEventListener('click', function(event) {
     event.stopPropagation(); // Prevent the click from bubbling up to the window
     if (dropdownMenu.style.display === "block") {
@@ -33,5 +19,16 @@ window.addEventListener('click', function(event) {
     }
 });
 
+// Apply styles for the status column after the page loads
+document.addEventListener("DOMContentLoaded", function() {
+    const statusCells = document.querySelectorAll("tbody td:nth-child(2)");
 
-
+    // Loop through each status cell and apply color based on its value
+    statusCells.forEach(cell => {
+        if (cell.textContent.trim() === "Active") {
+            cell.style.color = "#00ff00"; // Green color for Active
+        } else if (cell.textContent.trim() === "Closed") {
+            cell.style.color = "#ed4343"; // Red color for Closed
+        }
+    });
+});

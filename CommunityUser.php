@@ -67,6 +67,7 @@ $conn->close();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Community Forum</title>
     <link rel="stylesheet" href="CommunityUser.css">
+    <link rel="icon" type="image/x-icon" href="icon.png">
 </head>
 <body>
     <!-- Navbar -->
@@ -75,6 +76,9 @@ $conn->close();
             <h1>MindSync</h1>
         </div>
         <div class="right">
+        <div class="mailbox" onclick="window.location.href='mail.php';">
+            <span>&#9993;</span>
+        </div>
             <img src="https://cdn-icons-png.flaticon.com/512/147/147142.png" alt="User Icon" class="user-icon" id="user-icon">
             <div class="dropdown" id="dropdown-menu">
                 <a href="home1.php">Home</a>

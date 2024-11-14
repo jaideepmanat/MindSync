@@ -1,9 +1,7 @@
-/* General Styling */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
 }
 
 body, html {
@@ -39,19 +37,6 @@ nav .left h1 {
 
 nav .right {
     position: relative;
-    display: flex;
-}
-
-nav .right .mailbox :hover{
-    color: #00ff00e3;
-
-}
-
-nav .right .mailbox {
-    font-size: 30px;
-    margin-right: 25px; 
-    cursor: pointer;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 nav .right .user-icon {
@@ -82,75 +67,33 @@ nav .right .dropdown a:hover {
     color: #00ff00;
 }
 
-/* Main Content */
-.card {
-    width: 90%;
-    max-width: 800px;
-    background-color: #262626;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    text-align: left;
-    margin-top: 20px; /* Offset from navbar if needed */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #1e1e1e;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
 }
-
-/* Heading and Content */
+.card {
+    background-color: #262626;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 500px;
+}
 h2 {
-    color: #ffffff;
+    color: #00ff00;
+    font-size: 2em;
     margin-bottom: 20px;
 }
-
-.question {
-    margin: 15px 0;
-    padding: 10px;
-    background-color: #28372b;
-    border-radius: 5px;
-}
-
-.question h3 {
-    font-size: 18px;
-    margin-bottom: 5px;
-}
-
-.question p {
-    font-size: 14px;
-    margin-bottom: 10px;
-}
-
-.reply {
-    padding: 10px;
-    background-color: #788379;
-    border-left: 5px solid #28a745;
-    margin-top: 5px;
-    border-radius: 5px;
-}
-
-.reply h4 {
-    font-size: 16px;
-    margin-bottom: 5px;
-}
-
-.reply p {
-    font-size: 14px;
-    margin: 5px 0;
-}
-
-.question-form {
-    margin-top: 20px;
-}
-
-.question-form textarea {
-    width: 100%;
-    height: 100px;
-    padding: 10px;
+p {
+    font-size: 1.2em;
     color: white;
-    background-color: #2e2f2e;
-    border: 2px solid #00ff002a;
-    border-radius: 5px;
-    margin-bottom: 10px;
-    resize: none;
+    margin-bottom: 30px;
 }
-
 .button {
     padding: 10px 16px;
     background-color: #00ff00;
@@ -167,7 +110,6 @@ h2 {
     color: #00ff00;
     border: 2px solid #00ff00;
 }
-
 /* Responsive Adjustments */
 @media (max-width: 600px) {
     body {

@@ -13,6 +13,17 @@ if ($_SESSION['user_type'] !== 'normal') {
     exit();
 }
 
+// Assuming risk level is passed via session from the previous PHP page
+$risk_level = $_SESSION['risk_level'] ?? null; // Default to null if not set
+
+// Define consultant area filter based on risk level
+$consultant_area_filter = [];
+if ($risk_level === "High") {
+    $consultant_area_filter = ["severe_mental_health_conditions", "both"];
+} elseif ($risk_level === "Mid") {
+    $consultant_area_filter = ["wellness_and_preventative_mental_health", "both"];
+}
+
 // Database connection
 $host = "localhost";
 $user = "root";
@@ -26,8 +37,13 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-// Query to select consultants from users table
-$sql = "SELECT id, name, email FROM users WHERE user_type = 'consultant'";
+// Prepare the SQL query to select consultants based on the filter
+if (!empty($consultant_area_filter)) {
+    $filter_values = "'" . implode("','", $consultant_area_filter) . "'";
+    $sql = "SELECT id, name, email FROM users WHERE user_type = 'consultant' AND consultant_area IN ($filter_values)";
+} else {
+    $sql = "SELECT id, name, email FROM users WHERE user_type = 'consultant'";
+}
 $result = $conn->query($sql);
 
 // Query to check which consultants are already booked by the logged-in user
@@ -36,6 +52,7 @@ $bookedConsultantsSql = "SELECT consultant_id FROM booked_users WHERE user_id = 
 $bookedConsultantsResult = $conn->query($bookedConsultantsSql);
 $bookedConsultants = [];
 
+// Collect booked consultants
 while ($row = $bookedConsultantsResult->fetch_assoc()) {
     $bookedConsultants[] = $row['consultant_id'];
 }
@@ -45,12 +62,22 @@ $ratingsSql = "SELECT consultant_id, AVG(rating) as avg_rating FROM ratings GROU
 $ratingsResult = $conn->query($ratingsSql);
 $ratings = [];
 
+// Collect ratings
 while ($row = $ratingsResult->fetch_assoc()) {
     $ratings[$row['consultant_id']] = $row['avg_rating'];
 }
 
-$conn->close();
+$conn->close(); 
+if (isset($_SESSION['risk_level'])) {
+    $risk_level = ucfirst(strtolower($_SESSION['risk_level'])); // Format risk level
+    $risk_message = "<h1 style='color: #4CAF50; font-size: 1.8em; font-weight: bold; text-align: center; margin: 20px 0;'>
+    Based on your provided information, the assessed risk level is <strong>{$risk_level}</strong>. We recommend consulting with an expert advisor for guidance and support.
+    </h1>";
+} else {
+    $risk_message = "";
+}
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -79,6 +106,8 @@ $conn->close();
             </div>
         </div>
     </nav>
+
+    <?php echo $risk_message; ?>
 
     <!-- Cards Section -->
     <section class="cards">

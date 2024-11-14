@@ -1,0 +1,125 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #000; /* Black background */
+    color: #fff; /* White text color */
+    margin: 0;
+    padding: 0;
+}
+
+/* Navbar */
+nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: #000; /* Black background for navbar */
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-sizing: border-box;
+}
+
+nav .left h1 {
+    color: #00ff00; /* Green color for title */
+    margin: 0;
+}
+
+nav .right {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+nav .right .mailbox {
+    font-size: 30px;
+    margin-right: 25px;
+    cursor: pointer;
+    color: #fff; /* White color for mailbox icon */
+    transition: color 0.3s ease;
+}
+
+nav .right .mailbox:hover {
+    color: #00ff00; /* Green on hover */
+}
+
+nav .right .user-icon {
+    width: 40px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+nav .right .user-icon:hover {
+    transform: scale(1.1);
+}
+
+nav .right .dropdown {
+    display: none;
+    position: absolute;
+    top: 50px;
+    right: 0;
+    background-color: #333; /* Darker gray for dropdown */
+    padding: 10px;
+    border-radius: 5px;
+    width: 150px;
+    box-sizing: border-box;
+}
+
+nav .right .dropdown a {
+    color: #fff; /* White text in dropdown */
+    text-decoration: none;
+    font-size: 14px;
+    display: block;
+    padding: 5px 0;
+}
+
+nav .right .dropdown a:hover {
+    color: #00ff00; /* Green on hover */
+}
+
+/* Predictions Table */
+.predictions {
+    width: 90%;
+    max-width: 1000px;
+    margin: 100px auto 50px; /* Adjusted margin for fixed navbar */
+    text-align: center;
+}
+
+.predictions h2 {
+    font-size: 1.8em;
+    color: #00ff00; /* Green color for the heading */
+    margin-bottom: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid #00ff00; /* Green border for table */
+}
+
+th, td {
+    padding: 15px;
+    text-align: center;
+    color: #fff; /* White text */
+}
+
+th {
+    background-color: #000; /* Black background for header */
+    color: #00ff00; /* Green text for header */
+}
+
+tr:nth-child(even) {
+    background-color: #333; /* Darker row color */
+}
+
+tr:hover {
+    background-color: #444; /* Slightly lighter color on hover */
+}
+
+td {
+    font-size: 1em;
+}

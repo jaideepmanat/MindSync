@@ -1,0 +1,112 @@
+/* General Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body, html {
+    height: 100%;
+}
+
+body {
+    background-color: #1a1a1a;
+    color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Navbar */
+nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: #0a0a0a;
+}
+
+nav .left h1 {
+    color: #00ff00;
+}
+
+nav .right {
+    position: relative;
+}
+/* mail icon code */
+nav .right {
+    display: flex;
+}
+
+
+nav .right .user-icon {
+    width: 40px;
+    cursor: pointer;
+}
+
+nav .right .dropdown {
+    display: none;
+    position: absolute;
+    top: 50px;
+    right: 0;
+    background-color: #333;
+    padding: 10px;
+    border-radius: 5px;
+    width: 150px;
+}
+
+nav .right .dropdown a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    display: block;
+    padding: 5px 0;
+}
+
+nav .right .dropdown a:hover {
+    color: #00ff00;
+}
+.cards {
+    display:block;
+    justify-content: space-around;
+    align-items: stretch;
+    flex-grow: 1;
+    height: 10%;
+    width: 100%;
+    padding:10px 20px;
+}
+
+.card {
+    background-color: #262626;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.2);
+    height: 10%;
+    transition: height 0.5s ease, box-shadow 0.5s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 15px rgba(0, 255, 0, 0.5);
+}
+.card.expanded {
+    height: 90%; /* Expanded height */
+}
+
+.cardContent {
+    display: none; /* Hidden by default */
+    margin-top: 15px;
+}
+
+.card.expanded .cardContent {
+    display: block; /* Show when card is expanded */
+}
+.card.expanded .cardtitle p{
+    display: none;
+}

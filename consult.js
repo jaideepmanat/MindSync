@@ -101,3 +101,46 @@ window.addEventListener('click', function(event) {
         dropdownMenu.style.display = "none";
     }
 });
+
+// Function to toggle message form visibility
+function toggleMessageForm(consultantId) {
+    const form = document.getElementById(`message-form-${consultantId}`);
+    form.style.display = form.style.display === "none" ? "block" : "none";
+}
+
+// Function to submit the message
+function submitMessage(consultantId) {
+    const messageInput = document.getElementById(`message-input-${consultantId}`);
+    const messageText = messageInput.value.trim();
+
+    if (!messageText) {
+        alert("Please enter a message.");
+        return;
+    }
+
+    // Send message data to the server via AJAX
+    fetch("submit_message.php", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/x-www-form-urlencoded",
+        },
+        body: `consultant_id=${consultantId}&message_text=${encodeURIComponent(messageText)}`,
+    })
+    .then(response => response.text())
+    .then(data => {
+        if (data === "success") {
+            alert("Message sent successfully!");
+            toggleMessageForm(consultantId); // Hide the message form after submission
+            messageInput.value = ""; // Clear the input field
+        } else {
+            alert("Failed to send message: " + data);
+        }
+    })
+    .catch(error => console.error("Error:", error));
+}
+
+// Function to cancel the message form
+function cancelMessage(consultantId) {
+    toggleMessageForm(consultantId); // Hide the form
+    document.getElementById(`message-input-${consultantId}`).value = ""; // Clear the input
+}

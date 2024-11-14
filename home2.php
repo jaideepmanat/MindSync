@@ -26,6 +26,7 @@ if ($_SESSION['user_type'] !== 'consultant' && basename(__FILE__) === 'home2.php
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Consultant View</title>
     <link rel="stylesheet" href="home2.css">
+    <link rel="icon" type="image/x-icon" href="icon.png">
 </head>
 <body>
     <!-- Navbar -->
@@ -34,9 +35,13 @@ if ($_SESSION['user_type'] !== 'consultant' && basename(__FILE__) === 'home2.php
             <h1>MindSync</h1>
         </div>
         <div class="right">
+        <div class="mailbox" onclick="window.location.href='mail.php';">
+            <span>&#9993;</span>
+        </div>
             <img src="https://cdn-icons-png.flaticon.com/512/147/147142.png" alt="User Icon" class="user-icon" id="user-icon">
             <div class="dropdown" id="dropdown-menu">
                 <a href="Profile.php">View Profile</a>
+                <a href="table2.php">History</a>
                 <a href="logout.php">Logout</a>
             </div>
         </div>
@@ -56,7 +61,6 @@ if ($_SESSION['user_type'] !== 'consultant' && basename(__FILE__) === 'home2.php
         </div>
     </div>
 
-    <!-- Popup -->
    <!-- Popup -->
 <div id="popup" class="popup">
     <div class="popup-content">
@@ -73,7 +77,7 @@ if ($_SESSION['user_type'] !== 'consultant' && basename(__FILE__) === 'home2.php
         <br>
         <button onclick="closePopup()">Close</button>
     </div>
-</div>
+</div>  
 
 
     <script src="home2.js"></script>

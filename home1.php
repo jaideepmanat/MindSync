@@ -27,6 +27,7 @@ if ($_SESSION['user_type'] !== 'consultant' && basename(__FILE__) === 'home2.php
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MindSync</title>
     <link rel="stylesheet" href="home1.css">
+    <link rel="icon" type="image/x-icon" href="icon.png">
 </head>
 <body>
     <!-- Navbar -->
@@ -35,9 +36,14 @@ if ($_SESSION['user_type'] !== 'consultant' && basename(__FILE__) === 'home2.php
             <h1>MindSync</h1>
         </div>
         <div class="right">
+        <div class="mailbox" onclick="window.location.href='mail.php';">
+            <span>&#9993;</span>
+        </div>
+
             <img src="https://cdn-icons-png.flaticon.com/512/147/147142.png" alt="User Icon" class="user-icon" id="user-icon">
             <div class="dropdown" id="dropdown-menu">
                 <a href="Profile.php">View Profile</a>
+                <a href="table.php">History</a>
                 <a href="logout.php">Logout</a>
             </div>
         </div>
@@ -53,7 +59,7 @@ if ($_SESSION['user_type'] !== 'consultant' && basename(__FILE__) === 'home2.php
         <div class="card">
             <img src="image1.jpg" alt="Survey Image" class="card-image">
             <p>Take a short survey to help us understand your needs and preferences better.</p>
-            <button>Take a Survey</button>
+            <button onclick="location.href='form.php';">Take a Survey</button>
         </div>
         <div class="card">
             <img src="image2.jpg" alt="Consult Image" class="card-image">

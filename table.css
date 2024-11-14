@@ -1,0 +1,120 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+/* Navbar */
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 25px;
+    background-color: #0a0a0a;
+    z-index: 1000;
+}
+
+nav .left h1 {
+    color: #00ff00;
+}
+
+nav .right {
+    position: relative;
+    align-items: center;
+    display: flex;
+}
+nav .right .mailbox {
+    font-size: 30px;
+    margin-right: 25px; /* Adds spacing between mailbox and user icon */
+    cursor: pointer;
+    color:white;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+nav .right .mailbox :hover{
+    color: #00ff00e3;
+
+}
+
+nav .right .user-icon {
+    width: 40px;
+    cursor: pointer;
+}
+
+nav .right .dropdown {
+    display: none;
+    position: absolute;
+    top: 50px;
+    right: 0;
+    background-color: #333;
+    padding: 10px;
+    border-radius: 5px;
+    width: 150px;
+}
+
+nav .right .dropdown a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    display: block;
+    padding: 5px 0;
+}
+
+nav .right .dropdown a:hover {
+    color: #00ff00;
+}
+
+
+body {
+    font-family:'Times New Roman', Times, serif;
+    background-color: #1e1e1e;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.table-container {
+    width: 80%;
+    max-width: 800px;
+    overflow-x: auto;
+    background-color:#1e1e1e;
+    border-radius: 8px;
+    box-shadow: 0 0px 8px rgba(0, 250, 0, 0.4);
+    padding: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+thead {
+    background-color:#333;
+    border:2px solid rgba(0, 250, 0, 0.4);
+    color: #fff;
+}
+
+th, td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+tbody tr:hover {
+    box-shadow: 0 0px 20px rgba(0, 250, 0, 0.4);
+}
+
+tbody tr:nth-child(even) {
+    background-color: #333;
+}
+
+th {
+    font-weight: bold;
+}
+
+td {
+    color: #ffffff;
+}

@@ -31,7 +31,19 @@ nav .left h1 {
 }
 
 nav .right {
+    display: flex;
     position: relative;
+}
+
+nav .right .mailbox {
+    font-size: 30px;
+    margin-right: 25px; 
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+nav .right .mailbox :hover{
+    color: #00ff00e3;
+
 }
 
 nav .right .user-icon {
@@ -144,3 +156,66 @@ nav .right .dropdown a:hover {
         margin-bottom: 20px;
     }
 }
+
+/* Style for feedback row */
+.feedback-row td {
+    padding: 10px;
+}
+
+/* Flexbox to align the textarea and buttons in a row */
+.feedback-form {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px; /* Space between elements */
+}
+
+/* Style for the textarea */
+.feedback-textarea {
+    width: 60%;  /* Takes 60% of the available space */
+    height: 40px; /* Adjust the height for better visibility */
+    resize: vertical; /* Allow the user to resize the textarea vertically */
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #333;
+    background-color: #262626;
+    color: white;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.feedback-textarea:focus {
+    background-color: #333;
+    outline: none;
+}
+
+/* Style for the buttons */
+.feedback-form button {
+    padding: 10px 15px;
+    background-color: #00ff00;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.feedback-form button:hover {
+    background-color: #1a1a1a;
+    color: #00ff00;
+}
+
+/* Specific styles for Submit and Cancel buttons */
+.feedback-form .cancel-feedback {
+    background-color: #ff0000;
+    color: white;
+}
+
+.feedback-form .cancel-feedback:hover {
+    background-color: #1a1a1a;
+    color: #ff0000;
+}
+
+
+

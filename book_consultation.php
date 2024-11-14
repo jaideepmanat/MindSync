@@ -28,16 +28,26 @@ if (isset($_POST['consultantName'])) {
     $stmt->execute();
     $stmt->bind_result($consultant_id);
     $stmt->fetch();
-    $stmt->close();
-
+    
     if ($consultant_id) {
         // Insert booking record into booked_users table
         $insertQuery = "INSERT INTO booked_users (consultant_id, user_id) VALUES (?, ?)";
+        $stmt->close(); // Close the first statement after use
         $stmt = $conn->prepare($insertQuery);
         $stmt->bind_param("ii", $consultant_id, $user_id);
 
         if ($stmt->execute()) {
-            echo "success";
+            // Booking successful, now insert into history table as "Active" status
+            $historyInsertQuery = "INSERT INTO history (user_id, consultant_id, status, date_registered) VALUES (?, ?, 'Active', NOW())";
+            $stmt->close(); // Close the second statement after use
+            $stmt = $conn->prepare($historyInsertQuery);
+            $stmt->bind_param("ii", $user_id, $consultant_id);
+
+            if ($stmt->execute()) {
+                echo "success";
+            } else {
+                echo "Failed to record history: " . $stmt->error;
+            }
         } else {
             echo "Failed to book the consultant: " . $stmt->error;
         }
