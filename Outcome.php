@@ -28,15 +28,15 @@ if (!isset($_SESSION['user_id'])) {
         <div class="right">
             <img src="https://cdn-icons-png.flaticon.com/512/147/147142.png" alt="User Icon" class="user-icon" id="user-icon">
             <div class="dropdown" id="dropdown-menu">
-                <a href="#">View Profile</a>
-                <a href="#">Logout</a>
+                <a href="Profile.php">View Profile</a>
+                <a href="logout.php">Logout</a>
             </div>
         </div>
     </nav>
     <div class="card">
         <h2>Congratulations!</h2>
         <p>You are in great mental health. Keep it up!</p>
-        <button class="button" onclick="goHome()">Go Home</button>
+        <button class="button" onclick="location.href='home1.php';">Go Home</button>
     </div>
     <script src="Outcome.js"></script>
 </body>

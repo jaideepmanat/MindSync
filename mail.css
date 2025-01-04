@@ -1,4 +1,4 @@
-/* General Styling */
+/* Resetting Styles */
 * {
     margin: 0;
     padding: 0;
@@ -6,15 +6,14 @@
     font-family: 'Poppins', sans-serif;
 }
 
-body, html {
-    height: 100%;
-}
-
+/* Body Styling */
 body {
     background-color: #1a1a1a;
     color: white;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
 }
 
 /* Navbar */
@@ -22,26 +21,32 @@ nav {
     width: 100%;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding: 10px 20px;
     background-color: #0a0a0a;
+    position: fixed;
+    top: 0;
+    z-index: 100;
 }
 
 nav .left h1 {
     color: #00ff00;
+    font-size: 24px;
 }
 
 nav .right {
     position: relative;
 }
-/* mail icon code */
-nav .right {
-    display: flex;
-}
-
 
 nav .right .user-icon {
     width: 40px;
     cursor: pointer;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+
+nav .right .user-icon:hover {
+    transform: scale(1.1);
 }
 
 nav .right .dropdown {
@@ -53,6 +58,11 @@ nav .right .dropdown {
     padding: 10px;
     border-radius: 5px;
     width: 150px;
+    text-align: center;
+}
+
+nav .right:hover .dropdown {
+    display: block;
 }
 
 nav .right .dropdown a {
@@ -61,52 +71,70 @@ nav .right .dropdown a {
     font-size: 14px;
     display: block;
     padding: 5px 0;
+    transition: color 0.3s ease;
 }
 
 nav .right .dropdown a:hover {
     color: #00ff00;
 }
+
+/* Cards Section */
 .cards {
-    display:block;
-    justify-content: space-around;
-    align-items: stretch;
-    flex-grow: 1;
-    height: 10%;
-    width: 100%;
-    padding:10px 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    width: 90%;
+    max-width: 1200px;
+    margin-top: 80px; /* Space below the navbar */
+    padding: 20px;
 }
 
+/* Card Styling */
 .card {
     background-color: #262626;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    padding: 20px;
     border-radius: 10px;
-    text-align: center;
-    box-shadow: 0 0 10px rgba(0, 255, 0, 0.2);
-    height: 10%;
-    transition: height 0.5s ease, box-shadow 0.5s ease;
+    padding: 15px;
+    box-shadow: 0 4px 10px rgba(0, 255, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    overflow: hidden;
 }
 
 .card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 0 15px rgba(0, 255, 0, 0.5);
+    box-shadow: 0 8px 20px rgba(0, 255, 0, 0.5);
 }
-.card.expanded {
-    height: 90%; /* Expanded height */
+
+.cardtitle {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #00ff00;
+    text-align: center;
 }
 
 .cardContent {
+    font-size: 14px;
+    line-height: 1.5;
+    margin-top: 10px;
+    background-color: #333;
+    padding: 10px;
+    border-radius: 5px;
     display: none; /* Hidden by default */
-    margin-top: 15px;
 }
 
-.card.expanded .cardContent {
-    display: block; /* Show when card is expanded */
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    nav .left h1 {
+        font-size: 20px;
+    }
+
+    .cards {
+        grid-template-columns: 1fr; /* Single column layout for smaller screens */
+    }
+
+    .card {
+        margin-bottom: 20px; /* Add spacing between cards */
+    }
 }
-.card.expanded .cardtitle p{
-    display: none;
-}
+    

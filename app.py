@@ -1,15 +1,16 @@
 from flask import Flask, request, jsonify
-import pickle
+import pandas as pd
 import numpy as np
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.model_selection import train_test_split
+from sklearn.impute import SimpleImputer
+from sklearn.metrics import accuracy_score
+from sklearn.model_selection import GridSearchCV
 
 # Initialize Flask app
 app = Flask(__name__)
 
-# Load the saved model
-with open('voting_classifier_model.pkl', 'rb') as f:
-    model = pickle.load(f)
-
-# Define categorical mappings
+# Define mappings for categorical values
 gender_map = {
     "Female": 0,
     "Male": 1,
@@ -22,21 +23,52 @@ yes_no_map = {
     "No": 0
 }
 
-# Define risk level mapping for prediction output
-risk_level_map = {
-    0: "High",
-    1: "Low",
-    2: "Mid"
-}
+# Load dataset and preprocess
+def load_and_preprocess_data():
+    df = pd.read_csv('Preprocessed_Mind_Sync_Mental_Health_Survey.csv')
+    X = df.drop(columns=['Risk Levels'])
+    y = df['Risk Levels']
 
-# Define the predict route
+    imputer = SimpleImputer(strategy='mean')
+    X_imputed = imputer.fit_transform(X)
+
+    return X_imputed, y
+
+# Train model
+def train_model():
+    X, y = load_and_preprocess_data()
+    X_train, X_test, y_train, y_test = train_test_split(
+        X, y, test_size=0.3, random_state=42, stratify=y
+    )
+
+    param_grid = {
+        'n_estimators': [50, 100],
+        'max_depth': [10, 20, None],
+        'min_samples_split': [2, 5],
+        'min_samples_leaf': [1, 2],
+        'criterion': ['gini']
+    }
+
+    random_forest = RandomForestClassifier(random_state=42)
+    grid_search = GridSearchCV(
+        random_forest, param_grid, cv=3, scoring='accuracy', n_jobs=-1
+    )
+    grid_search.fit(X_train, y_train)
+
+    best_model = grid_search.best_estimator_
+
+    train_accuracy = accuracy_score(y_train, best_model.predict(X_train))
+    test_accuracy = accuracy_score(y_test, best_model.predict(X_test))
+
+    return best_model, train_accuracy, test_accuracy, X_train, X_test, y_train, y_test
+
+# Train the model and store results globally
+model, train_accuracy, test_accuracy, X_train, X_test, y_train, y_test = train_model()
+
 @app.route('/predict', methods=['POST'])
 def predict():
-    # Get JSON data from the POST request
     data = request.json
-    print("Received data:", data)  # Debugging line to print incoming JSON
 
-    # Ensure all expected keys are present in `data` and convert categorical values
     try:
         features = [
             data['Age'],
@@ -66,21 +98,24 @@ def predict():
             yes_no_map.get(data['Have you ever attended therapy or counseling sessions?'], 0),
             data['How would you rate your physical health over the past month?']
         ]
-    except KeyError as e:
-        return jsonify({"error": f"Missing key in input data: {e}"}), 400
 
-    # Convert features to a 2D array for prediction
-    features_array = np.array([features])
-    
-    # Get prediction from model
-    prediction = model.predict(features_array)[0]
+        features_array = np.array([features])
+        prediction = model.predict(features_array)[0]
 
-    # Map prediction to risk level
-    risk_level = risk_level_map.get(prediction, "Unknown")
+        # Map prediction to risk level
+        risk_level_map = {0: "High", 1: "Low", 2: "Mid"}
+        risk_level = risk_level_map.get(prediction, "Unknown")
 
-    # Return the risk level as a string
-    return jsonify({'prediction': risk_level})
+        return jsonify({'prediction': risk_level})
+    except Exception as e:
+        return jsonify({'error': str(e)}), 400
 
-# Run the app
+@app.route('/accuracy', methods=['GET'])
+def get_accuracy():
+    return jsonify({
+        'train_accuracy': train_accuracy,
+        'test_accuracy': test_accuracy
+    })
+
 if __name__ == '__main__':
     app.run(debug=True)

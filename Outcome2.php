@@ -71,7 +71,7 @@ $conn->close();
 if (isset($_SESSION['risk_level'])) {
     $risk_level = ucfirst(strtolower($_SESSION['risk_level'])); // Format risk level
     $risk_message = "<h1 style='color: #4CAF50; font-size: 1.8em; font-weight: bold; text-align: center; margin: 20px 0;'>
-    Based on your provided information, the assessed risk level is <strong>{$risk_level}</strong>. We recommend consulting with an expert advisor for guidance and support.
+   Risk level : <strong>{$risk_level}</strong>
     </h1>";
 } else {
     $risk_message = "";
@@ -85,7 +85,7 @@ if (isset($_SESSION['risk_level'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Consultants</title>
-    <link rel="stylesheet" href="consult.css">
+    <link rel="stylesheet" href="Outcome2.css">
     <link rel="icon" type="image/x-icon" href="icon.png">
 </head>
 <body>
@@ -106,6 +106,7 @@ if (isset($_SESSION['risk_level'])) {
             </div>
         </div>
     </nav>
+    <br><br><br>
 
     <?php echo $risk_message; ?>
 

@@ -1,65 +1,70 @@
 <?php
-session_start(); // Start a new session
-
-include 'config.php'; // Include your database configuration file
+session_start(); // Start a session
+include 'config.php'; // Include database configuration
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    // Sanitize input to prevent SQL injection
     $email = trim($_POST['emailSignIn']);
     $password = trim($_POST['passwordSignIn']);
 
-    // Check if fields are empty
+    // Input validation
     if (empty($email) || empty($password)) {
-        echo "<script>alert('Please fill in all required fields.'); window.history.back();</script>";
+        header("Location: login.html?error=Fill%20all%20required%20fields");
         exit();
     }
 
-    // Prepare SQL statement to check for user
+    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        header("Location: login.html?error=Invalid%20email%20format");
+        exit();
+    }
+
+    // Special case for admin login
+    if ($email === 'admin@test.com' && $password === 'admin') {
+        session_regenerate_id(true); // Regenerate session ID
+        $_SESSION['user_id'] = 'admin';
+        $_SESSION['user_type'] = 'admin';
+
+        // Redirect to admin page
+        header("Location: admin.php");
+        exit();
+    }
+
+    // Proceed with normal user authentication
     $sql = "SELECT * FROM users WHERE email = ?";
     $stmt = $conn->prepare($sql);
     $stmt->bind_param("s", $email);
     $stmt->execute();
     $result = $stmt->get_result();
 
-    // Check if user exists
     if ($result->num_rows > 0) {
-        $user = $result->fetch_assoc(); // Fetch user data
+        $user = $result->fetch_assoc();
 
-        // Verify password
         if (password_verify($password, $user['password'])) {
-            // Store user data in session
-            $_SESSION['user_id'] = $user['id'];
+            session_regenerate_id(true); // Regenerate session ID
 
-            // Check if user_type is set and valid
-            if (isset($user['user_type']) && !empty($user['user_type'])) {
-                $_SESSION['user_type'] = $user['user_type'];
-                
-                // Redirect based on user type
-                if ($user['user_type'] === 'normal') {
-                    header("Location: home1.php"); // Redirect to user home page
-                } elseif ($user['user_type'] === 'consultant') {
-                    header("Location: home2.php"); // Redirect to consultant home page
-                }
-                exit();
+            $_SESSION['user_id'] = $user['id'];
+            $_SESSION['user_type'] = $user['user_type'] ?? 'undefined';
+
+            // Redirect based on user type
+            if ($user['user_type'] === 'normal') {
+                header("Location: home1.php");
+            } elseif ($user['user_type'] === 'consultant') {
+                header("Location: home2.php");
             } else {
-                // Error handling if user_type is not set or is invalid
-                echo "<script>alert('Error: User type is undefined or invalid for this account.'); window.history.back();</script>";
-                exit();
+                header("Location: login.html?error=Invalid%20user%20type");
             }
+            exit();
         } else {
-            echo "<script>alert('Incorrect password!'); window.history.back();</script>"; // Alert for incorrect password
+            header("Location: login.html?error=Incorrect%20Password");
             exit();
         }
     } else {
-        echo "<script>alert('Email not registered!'); window.history.back();</script>"; // Alert for unregistered email
+        header("Location: login.html?error=Email%20not%20registered");
         exit();
     }
 
-    // Close statement and connection
     $stmt->close();
     $conn->close();
 } else {
-    // Redirect to login page if accessed directly
     header("Location: login.html");
     exit();
 }

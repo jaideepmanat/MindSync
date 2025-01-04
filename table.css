@@ -1,45 +1,67 @@
+/* General Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
+
+/* Body Styling */
+body {
+    background-color: #1a1a1a;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    padding-top: 80px; /* For navbar spacing */
+}
+
 /* Navbar */
 nav {
-    position: fixed;
-    top: 0;
     width: 100%;
     display: flex;
     justify-content: space-between;
-    padding: 10px 25px;
+    align-items: center;
+    padding: 10px 20px;
     background-color: #0a0a0a;
-    z-index: 1000;
+    position: fixed;
+    top: 0;
+    z-index: 100;
 }
 
 nav .left h1 {
     color: #00ff00;
+    font-size: 24px;
 }
 
 nav .right {
-    position: relative;
-    align-items: center;
     display: flex;
+    align-items: center;
+    position: relative;
 }
+
 nav .right .mailbox {
     font-size: 30px;
-    margin-right: 25px; /* Adds spacing between mailbox and user icon */
+    margin-right: 25px;
     cursor: pointer;
-    color:white;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s ease, color 0.3s ease;
 }
-nav .right .mailbox :hover{
-    color: #00ff00e3;
 
+nav .right .mailbox:hover {
+    color: #00ff00;
+    transform: scale(1.1);
 }
 
 nav .right .user-icon {
     width: 40px;
     cursor: pointer;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+
+nav .right .user-icon:hover {
+    transform: scale(1.1);
 }
 
 nav .right .dropdown {
@@ -51,6 +73,11 @@ nav .right .dropdown {
     padding: 10px;
     border-radius: 5px;
     width: 150px;
+    text-align: center;
+}
+
+nav .right:hover .dropdown {
+    display: block;
 }
 
 nav .right .dropdown a {
@@ -59,62 +86,79 @@ nav .right .dropdown a {
     font-size: 14px;
     display: block;
     padding: 5px 0;
+    transition: color 0.3s ease;
 }
 
 nav .right .dropdown a:hover {
     color: #00ff00;
 }
 
-
-body {
-    font-family:'Times New Roman', Times, serif;
-    background-color: #1e1e1e;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    margin: 0;
-}
-
+/* Table Container */
 .table-container {
-    width: 80%;
-    max-width: 800px;
-    overflow-x: auto;
-    background-color:#1e1e1e;
-    border-radius: 8px;
-    box-shadow: 0 0px 8px rgba(0, 250, 0, 0.4);
+    width: 90%;
+    max-width: 1200px;
+    margin-top: 20px;
+    background-color: #262626;
+    border-radius: 10px;
     padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 255, 0, 0.3);
+    overflow-x: auto;
 }
 
+/* Table */
 table {
     width: 100%;
     border-collapse: collapse;
-    text-align: left;
-}
-
-thead {
-    background-color:#333;
-    border:2px solid rgba(0, 250, 0, 0.4);
-    color: #fff;
-}
-
-th, td {
-    padding: 12px 15px;
-    border-bottom: 1px solid #ddd;
-}
-
-tbody tr:hover {
-    box-shadow: 0 0px 20px rgba(0, 250, 0, 0.4);
-}
-
-tbody tr:nth-child(even) {
     background-color: #333;
 }
 
-th {
+thead {
+    background-color: #444;
+    text-align: left;
+}
+
+thead th {
+    padding: 15px;
+    color: #00ff00;
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+tbody tr {
+    border-bottom: 1px solid #555;
+    transition: background-color 0.3s ease;
+}
+
+tbody tr:hover {
+    background-color: rgba(0, 255, 0, 0.1);
+}
+
+tbody td {
+    padding: 12px 15px;
+    color: white;
+    font-size: 14px;
+}
+
+tbody td:nth-child(3) {
     font-weight: bold;
 }
 
-td {
-    color: #ffffff;
+tbody td:nth-child(4) {
+    text-align: center;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .table-container {
+        padding: 15px;
+    }
+
+    table {
+        font-size: 12px;
+    }
+
+    thead th, tbody td {
+        padding: 10px;
+    }
 }

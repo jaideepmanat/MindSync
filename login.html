@@ -11,7 +11,7 @@
 <body>
     <div class="container" id="container">
         <div class="form-container sign-up-container">
-            <form action="register.php" method="post">
+            <form action="register.php" method="post" enctype="multipart/form-data">
                 <h1>Create Account</h1>
                 <div class="input-container">
                     <input type="text" id="name" name="name" required placeholder=" " />
@@ -33,7 +33,7 @@
                     </select>
                     <label for="userType">User Type</label>
                 </div>
-                <div class="input-container" id="consultantAreaContainer" style="display: none;">
+                <div class="input-container" id="consultantAreaContainer" style="display: none;" required>
                     <select id="consultantArea" name="consultantArea">
                         <option value="" disabled selected>Select Area of Expertise</option>
                         <option value="severe_mental_health_conditions">Severe Mental Health Conditions</option>
@@ -42,6 +42,10 @@
                     </select>
                     <label for="consultantArea">Area of Expertise</label>
                 </div>
+                <div class="input-container" id="proofUploadContainer" style="display: none;">
+                    <input type="file" id="proofUpload" name="proofUpload" accept=".pdf,.jpg,.jpeg,.png" />
+                    <label for="proofUpload">Upload Proof</label>
+                </div>                
                 <div class="input-container">
                     <input type="password" id="password" name="password" required placeholder=" " />
                     <label for="password">Password</label>

@@ -1,3 +1,4 @@
+/* Reset Styles */
 * {
     margin: 0;
     padding: 0;
@@ -10,14 +11,13 @@ body, html {
 }
 
 body {
-    font-family: 'Poppins', sans-serif;
-    background-color: #1e1e1e;
+    background-color: #121212; /* Sleek dark theme */
     color: white;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-top: 80px; /* Default padding */
+    justify-content: center; /* Center the card horizontally */
+    align-items: center; /* Center the card vertically */
     min-height: 100vh;
+    margin: 0;
 }
 
 /* Navbar */
@@ -34,15 +34,25 @@ nav {
 
 nav .left h1 {
     color: #00ff00;
+    font-size: 24px;
 }
 
 nav .right {
     position: relative;
+    display: flex;
+    align-items: center;
 }
 
 nav .right .user-icon {
     width: 40px;
     cursor: pointer;
+    border-radius: 50%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+nav .right .user-icon:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 8px #00ff00;
 }
 
 nav .right .dropdown {
@@ -54,6 +64,11 @@ nav .right .dropdown {
     padding: 10px;
     border-radius: 5px;
     width: 150px;
+    z-index: 100;
+}
+
+nav .right:hover .dropdown {
+    display: block; /* Dropdown is displayed on hover */
 }
 
 nav .right .dropdown a {
@@ -62,92 +77,111 @@ nav .right .dropdown a {
     font-size: 14px;
     display: block;
     padding: 5px 0;
+    transition: color 0.3s ease;
 }
 
 nav .right .dropdown a:hover {
     color: #00ff00;
 }
 
-body {
-    font-family:'Times New Roman', Times, serif;
-    background-color: #1e1e1e;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    margin: 0;
-}
+/* Card Styling */
 .card {
-    background-color: #262626;
-    align-items: center;
-    padding: 20px; /* Increased padding */
-    border-radius: 10px;
-    box-shadow: 0 0px 10px rgba(0, 255, 0, 0.5);
+    background-color: #1e1e1e; /* Dark card background */
+    padding: 25px;
+    border-radius: 12px; /* Smooth edges */
+    box-shadow: 0 8px 20px rgba(0, 255, 0, 0.3); /* Subtle green glow */
     text-align: center;
-    max-width: 600px; /* Increased width */
+    max-width: 400px;
     width: 90%;
-    border: 1px solid #5c5d5c;
+    border: 1px solid #333;
+    position: relative; /* For decorative elements */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+/* Subtle decorative dashed border */
+.card::before {
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    border: 2px dashed rgba(0, 255, 0, 0.4);
+    border-radius: 12px;
+    pointer-events: none;
+    transition: transform 0.3s ease; /* Smooth animation on hover */
+}
+
 .card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 0 25px rgba(0, 255, 0, 0.5);
+    transform: translateY(-8px);
+    box-shadow: 0 10px 30px rgba(0, 255, 0, 0.5); /* Enhanced glow on hover */
 }
 
-.profile-layout {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    text-align: left;
+.card:hover::before {
+    transform: scale(1.05); /* Animation for dashed border */
 }
 
+/* Profile Picture */
 .profile-icon {
-    width: 150px;
-    height: 150px;
+    width: 120px;
+    height: 120px;
     border-radius: 50%;
+    border: 3px solid #00ff00;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 10px rgba(0, 255, 0, 0.5); /* Glow for profile picture */
 }
 
+/* Profile Details */
 .profile-details {
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 10px;
 }
 
 .profile-details h2 {
+    font-size: 22px;
+    font-weight: bold;
+    color: #00ff00;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
     margin-bottom: 10px;
-    text-align: center; /* Center-aligns the name */
 }
 
-.credentials {
-    font-family: 'Times New Roman', Times, serif;
-    width: 150px; /* Set a fixed width for labels to align items properly */
-    padding-right: 10px; /* Adds space between label and text */
-    text-align: right; /* Right-aligns the label for better readability */
-}
-
-.consultant-area-info, .email-info, .Phn-no-info, .user-type-info {
+.profile-details .info {
+    width: 100%;
+    text-align: left;
+    margin: 10px 0;
+    font-size: 16px;
+    color: #d3d3d3; /* Subtle text color for labels */
     display: flex;
-    align-items: center;
-    margin-top: 15px;
+    justify-content: space-between;
 }
 
-.consultant-area, .mailid, .Phn-no, .user-type {
-    flex-grow: 1; /* Ensures the text spans to the right of the label */
-    padding-left: 10px;
-    white-space: nowrap; /* Prevents text wrapping to the next line */
+.profile-details .info .label {
+    font-weight: bold;
 }
 
+.profile-details .info .value {
+    color: white;
+}
 
 /* Responsive Adjustments */
-@media (max-width: 600px) {
-    body {
-        padding-top: 100px; /* Adjusted for mobile */
+@media (max-width: 768px) {
+    .card {
+        max-width: 90%;
     }
-}
 
-@media (min-width: 601px) and (max-width: 1200px) {
-    body {
-        padding-top: 100px; /* Adjusted for tablets */
+    .profile-icon {
+        width: 100px;
+        height: 100px;
+    }
+
+    .profile-details h2 {
+        font-size: 18px;
+    }
+
+    .profile-details .info {
+        font-size: 14px;
     }
 }

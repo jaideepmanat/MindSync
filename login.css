@@ -31,7 +31,9 @@ body {
     position: absolute;
     top: 0;
     height: 100%;
-    transition: all 0.6s ease-in-out;
+    width: 50%; /* Ensures each form container is exactly half the width */
+    transition: transform 0.6s ease-in-out, opacity 0.6s ease-in-out; /* Smooth transition */
+    overflow: hidden; /* Prevents overflowing content during animations */
 }
 
 .sign-in-container {
@@ -41,20 +43,39 @@ body {
 }
 
 .sign-up-container {
+    position: absolute;
     left: 0;
     width: 50%;
-    opacity: 0;
+    height: 100%;
+    overflow-y: auto; /* Enable scrolling for long forms */
+    padding: 20px; /* Add padding to prevent content overflow */
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
+    justify-content: flex-start; /* Keep content aligned at the top */
+    align-items: center; /* Center content horizontally */
+    box-sizing: border-box; /* Ensure padding doesn't add to width/height */
+    opacity: 0; /* Hidden by default */
     z-index: 1;
-    height: 100%; /* Ensure full height */
-    overflow-y: auto; /* Enable vertical scrolling */
 }
 
 .sign-up-container h1 {
-    position: sticky; /* Make title sticky */
-    top: 0; /* Position at the top of the container */
-    background-color: #1b1b1b; /* Match the container's background */
-    z-index: 2; /* Ensure it appears above other content */
-    padding: 10px 0; /* Optional padding for aesthetics */
+    position: static; /* Remove sticky positioning */
+    margin-bottom: 20px; /* Add spacing below the title */
+    text-align: center; /* Center-align title */
+    width: 100%; /* Occupy full width */
+}
+
+#consultantAreaContainer,
+#proofUploadContainer {
+    display: none; /* Hidden by default */
+    width: 100%; /* Ensure full width alignment */
+}
+
+#consultantAreaContainer.active,
+#proofUploadContainer.active {
+    display: flex; /* Change to flex for proper alignment */
+    flex-direction: column; /* Stack elements */
+    justify-content: flex-start;
 }
 
 .container.right-panel-active .sign-in-container {
@@ -83,7 +104,7 @@ body {
 }
 
 .overlay {
-    background: linear-gradient(to right, #00ff00, #00cc00); /* Green gradient */
+    background: linear-gradient(135deg, #00ff00 30%, #006600 90%);
     color: white;
     position: relative;
     left: -100%;
@@ -130,25 +151,26 @@ body {
 
 button {
     border-radius: 20px;
-    border: 2px solid #00ff00; /* Green border */
-    background-color: #00ff00; /* Green button color */
-    color: black; /* Button text color */
+    border: 2px solid #00ff00;
+    background-color: #00ff00;
+    color: black;
     font-size: 12px;
     font-weight: bold;
     padding: 12px 45px;
     letter-spacing: 1px;
     text-transform: uppercase;
     cursor: pointer;
-    transition: background-color 0.3s, color 0.3s;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
 }
 
 button:hover {
-    background-color: black; /* Change to black on hover */
-    color: #00ff00; /* Change text color to green on hover */
+    background-color: black;
+    color: #00ff00;
+    transform: scale(1.05);
 }
 
 form {
-    background-color: #1b1b1b; /* Dark form background */
+    background-color: #1b1b1b;
     display: flex;
     flex-direction: column;
     padding: 0 50px;
@@ -162,21 +184,29 @@ form {
     position: relative;
     margin: 20px 0;
     width: 100%;
+    margin-bottom: 15px;
 }
 
 input {
-    background-color: transparent; /* Transparent background */
-    border: none; /* No border */
-    border-bottom: 1px solid white; /* White bottom border */
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid white;
     padding: 12px 15px;
     width: 100%;
-    color: white; /* White text in input */
-    outline: none; /* Remove outline */
+    color: white;
+    outline: none;
     transition: border-color 0.3s;
 }
 
 input:focus {
-    border-bottom: 1px solid #00ff00; /* Change bottom border to green on focus */
+    border-bottom: 1px solid #00ff00;
+}
+
+input:-webkit-autofill {
+    background-color: transparent !important;
+    -webkit-box-shadow: 0 0 0 50px black inset !important;
+    -webkit-text-fill-color: white !important;
+    transition: background-color 5000s ease-in-out 0s;
 }
 
 label {
@@ -186,6 +216,7 @@ label {
     color: white;
     transition: 0.3s ease;
     pointer-events: none;
+    font-size: 14px;
 }
 
 input:focus + label,
@@ -193,25 +224,21 @@ input:not(:placeholder-shown) + label {
     top: -8px;
     left: 15px;
     font-size: 12px;
-    color: #00ff00; /* Green when floating */
+    color: #00ff00;
 }
 
-a {
-    color: #00ff00; /* Green link color */
-    font-size: 14px;
-    text-decoration: none;
-    margin: 15px 0;
-}
-
-.ghost {
-    background-color: white; /* White button color */
-    color: black; /* Black text color */
-    border: 2px solid transparent; /* Make the border transparent */
-}
-
-.ghost:hover {
-    background-color: black; /* Change to black on hover */
-    color: #00ff00; /* Change text color to green on hover */
+select {
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid white;
+    padding: 12px 15px;
+    width: 100%;
+    color: white;
+    outline: none;
+    transition: border-color 0.3s;
+    appearance: none; /* Removes default browser dropdown arrow */
+    font-size: 16px;
+    cursor: pointer;
 }
 
 .select-container {
@@ -220,66 +247,119 @@ a {
     width: 100%;
 }
 
-select {
-    background-color: transparent; /* Make select box background transparent */
-    border: none; /* No border */
-    border-bottom: 1px solid white; /* White bottom border */
-    padding: 12px 15px;
-    width: 100%;
-    color: white; /* White text in select */
-    outline: none; /* Remove outline */
-    transition: border-color 0.3s;
-}
-
-
 select:focus {
-    border-bottom: 1px solid #00ff00; /* Change bottom border to green on focus */
-}
-
-label {
-    position: absolute;
-    top: 12px;
-    left: 15px;
-    color: white;
-    transition: 0.3s ease;
-    pointer-events: none;
-}
-
-select::-ms-expand {
-    display: none; /* Remove the default dropdown arrow for IE */
+    border-bottom: 1px solid #00ff00;
 }
 
 select option {
-    background-color: black; /* Black background for dropdown options */
-    color: white; /* White text for options */
+    background-color: black; /* Dropdown options background */
+    color: white; /* Dropdown options text color */
 }
 
 select:focus + label,
-select:not(:placeholder-shown) + label {
+select:not([value=""]) + label {
     top: -8px;
     left: 15px;
     font-size: 12px;
-    color: #00ff00; /* Green when floating */
+    color: #00ff00; /* Green floating label on focus or selection */
+}
+
+.select-container::after {
+    content: '▼';
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+    color: white;
+    font-size: 12px;
+}
+
+a {
+    color: #00ff00;
+    font-size: 14px;
+    text-decoration: none;
+    margin: 15px 0;
+}
+
+.ghost {
+    background-color: white;
+    color: black;
+    border: 2px solid transparent;
+}
+
+.ghost:hover {
+    background-color: black;
+    color: #00ff00;
+}
+
+input[type="file"] {
+    color: white;
+    border: none;
+    border-bottom: 1px solid white;
+    padding: 12px 15px;
+    width: 100%;
+    outline: none;
+    background-color: transparent;
+    transition: border-color 0.3s;
+}
+
+input[type="file"]::file-selector-button {
+    background-color: #00ff00;
+    border: none;
+    padding: 8px 12px;
+    color: black;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+input[type="file"]::file-selector-button:hover {
+    background-color: black;
+    color: #00ff00;
 }
 
 .sign-up-container::-webkit-scrollbar {
-    width: 8px; /* Width of the scrollbar */
+    width: 8px;
 }
 
 .sign-up-container::-webkit-scrollbar-track {
-    background: black; /* Background of the scrollbar track */
+    background: black;
 }
 
 .sign-up-container::-webkit-scrollbar-thumb {
-    background-color: #00ff00; /* Color of the scrollbar thumb */
-    border-radius: 10px; /* Rounded corners for the scrollbar thumb */
+    background-color: #00ff00;
+    border-radius: 10px;
 }
 
-/* For Firefox */
 .sign-up-container {
-    scrollbar-width: thin; /* Makes the scrollbar thin */
-    scrollbar-color: #00ff00 black; /* thumb color and track color */
+    scrollbar-width: thin;
+    scrollbar-color: #00ff00 black;
 }
 
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+    }
+    .form-container, .overlay-container {
+        width: 100%;
+    }
+    .overlay {
+        width: 100%;
+        height: 50%;
+    }
+    .overlay-panel {
+        width: 100%;
+        padding: 20px;
+    }
+    .sign-up-container {
+        padding: 15px;
+    }
 
-
+    .sign-up-container h1 {
+        font-size: 1.5em; /* Adjust font size for smaller screens */
+    }
+}

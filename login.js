@@ -48,3 +48,28 @@ form.addEventListener('submit', function(event) {
     .catch(error => console.error('Error:', error));
 });
 
+const proofUploadContainer = document.getElementById('proofUploadContainer');
+
+// Modify the existing userTypeSelect event listener
+userTypeSelect.addEventListener('change', function () {
+    if (this.value === 'consultant') {
+        consultantAreaContainer.style.display = 'block';
+        proofUploadContainer.style.display = 'block'; // Show the upload proof container
+    } else {
+        consultantAreaContainer.style.display = 'none';
+        proofUploadContainer.style.display = 'none'; // Hide the upload proof container
+    }
+});
+
+form.addEventListener('submit', function (event) {
+    // Check if the user is a consultant
+    if (userTypeSelect.value === 'consultant') {
+        // Validate Area of Expertise
+        if (!consultantArea.value) {
+            event.preventDefault(); // Prevent form submission
+            alert('Please select your Area of Expertise.');
+            consultantArea.focus(); // Focus on the dropdown for the user
+            return;
+        }
+    }
+});
