@@ -1,0 +1,433 @@
+Timestamp,How do you feel today?,Emotion
+2025-02-13 14:32:59.000, I feel like my brain is always on high alert.,Frustrated
+2025-02-13 14:32:59.000,"I’m trying my best, but it’s not enough.",Happy
+2025-02-28 16:38:51.621,The worst part of sadness is not knowing when it will end. ,Sad
+2025-02-28 17:41:26.996,  I have so much love to give. ,Happy
+2025-02-28 16:36:34.982,"No matter how much I sleep, I still feel tired.",Frustrated
+2025-02-28 16:30:30.236,  I hate how stress and frustration go hand in hand.,Anxious
+2025-02-28 16:41:47.745, I feel like a puzzle with missing pieces.  ,Frustrated
+2025-02-13 14:33:01.000, I hate how my anxiety makes me doubt everything.,Sad
+2025-02-28 16:34:47.592,"I wish I could just cry, but the tears won’t come.",Sad
+2025-02-28 17:06:06.440," I just want a solution, not more problems.",Sad
+2025-02-13 14:32:59.000,I feel like I’m constantly bracing for something bad.,Sad
+2025-02-12 14:32:49.000, I keep having to remind myself that I’m okay.,Happy
+2025-02-12 14:32:30.000,I don’t understand why things have to be this difficult.,Sad
+2025-02-28 16:31:06.566, I wish people would stop making excuses.,Frustrated
+2025-02-28 16:50:33.744,  I had a moment where I realized how beautiful life is.   ,Happy
+2025-02-28 16:46:56.903,I hate how much I overthink everything.  ,Sad
+2025-02-28 17:37:33.842,I wish I could just let go of this frustration.,Frustrated
+2025-02-28 16:52:27.485, Today was simple but perfect.   ,Happy
+2025-02-13 14:33:01.000,  I just need a break from my own thoughts.,Happy
+2025-02-12 14:32:58.000," My heart skipped a beat, and now I’m panicking.",Anxious
+2025-02-28 16:36:45.937,I wish I could stop overthinking everything.,Anxious
+2025-02-12 14:32:58.000,I hate the way my body reacts to stress.,Anxious
+2025-02-13 14:33:00.000,I’m so tired of waiting on people.,Frustrated
+2025-02-28 16:51:23.602, I love the way my heart flutters with excitement.  ,Happy
+2025-02-28 16:30:21.361, I feel like I’m screaming into the void.,Frustrated
+2025-02-12 14:32:30.000,My mind feels like a tangled mess of worries.,Frustrated
+2025-02-28 16:45:39.373," Some days, even breathing feels hard. ",Sad
+2025-02-13 14:32:59.000, I keep replaying the same scenario in my head.,Frustrated
+2025-02-12 14:32:30.000, I’m overthinking every little thing I said today.,Anxious
+2025-02-12 14:32:49.000,  I don’t know how to let go of this fear.,Anxious
+2025-02-12 14:32:49.000,I hate when anxiety makes me feel physically sick,Sad
+2025-02-13 14:33:01.000, I’m so fed up with feeling stuck.,Frustrated
+2025-02-28 16:30:30.236,  I hate how stress and frustration go hand in hand.,Anxious
+2025-02-28 17:03:10.014, I love how sunshine feels on my skin.   ,Happy
+2025-02-12 14:32:58.000, I keep clenching my jaw without realizing it.,Frustrated
+2025-02-28 17:57:17.477,  I love the way my heart feels full when I’m with people I love.   ,Happy
+2025-02-28 17:50:51.347, I made a new friend today.  ,Frustrated
+2025-02-28 16:46:05.099,  I feel like I’m falling behind in life. ,Sad
+2025-02-12 14:32:30.000, I’m overthinking every little thing I said today.,Anxious
+2025-02-28 16:45:45.356, I don’t know how to feel whole again.  ,Frustrated
+2025-02-13 14:33:00.000,I feel like I’m about to explode.,Frustrated
+2025-02-12 14:32:49.000,  I don’t know how to let go of this fear.,Anxious
+2025-02-28 17:52:43.753,"  I got good news, and I can’t stop smiling.  ",Happy
+2025-02-28 17:27:09.687, I feel like I’m glowing with happiness.  ,Happy
+2025-02-28 16:35:04.880,I keep waiting for things to get better.,Happy
+2025-02-12 14:32:58.000, I hate when people waste my time.,Sad
+2025-02-13 14:33:00.000,  I don’t know why I feel so tense.,Anxious
+2025-02-28 17:36:41.377, I love the feeling of a fresh start.  ,Happy
+2025-02-12 14:32:49.000,  I don’t know how to let go of this fear.,Anxious
+2025-02-12 14:32:58.000, I’m so tired of being afraid of everything.,Frustrated
+2025-02-28 17:28:43.826,  I love the way my heart races when I’m excited. ,Happy
+2025-02-28 16:36:45.937,I wish I could stop overthinking everything.,Anxious
+2025-02-28 16:41:33.563, I keep thinking about all the things I should have said. ,Frustrated
+2025-02-28 16:41:02.573, I wonder if I’ll ever feel truly happy again.   ,Happy
+2025-02-28 17:56:20.010, I have so much love to give.  ,Happy
+2025-02-28 16:36:45.937,I wish I could stop overthinking everything.,Anxious
+2025-02-12 14:32:30.000, I’m so worried about things I can’t control.,Anxious
+2025-02-28 16:38:06.968,I just want someone to hold me and say it’s okay.,Happy
+2025-02-28 17:17:40.829," I let go of something that was holding me back, and I feel free. ",Frustrated
+2025-02-28 16:55:35.294, I had a moment where I just felt pure gratitude. ,Happy
+2025-02-13 14:33:01.000,I’m frustrated beyond words.,Frustrated
+2025-02-28 16:36:45.937,I wish I could stop overthinking everything.,Anxious
+2025-02-28 16:56:46.971, I feel like I’m exactly where I’m meant to be.   ,Happy
+2025-02-28 16:55:58.691," I feel seen, loved, and appreciated.  ",Happy
+2025-02-28 16:45:52.047,  I keep giving pieces of myself to people who don’t care.  ,Frustrated
+2025-02-28 17:19:10.492, I love the way morning light filters through my window.   ,Happy
+2025-02-12 14:32:58.000,  I hate when people don’t take me seriously.,Sad
+2025-02-28 16:46:05.099,  I feel like I’m falling behind in life. ,Sad
+2025-02-28 16:45:39.373," Some days, even breathing feels hard. ",Sad
+2025-02-28 16:29:43.494,I feel like a ghost in my own life.,Happy
+2025-02-28 16:45:21.598,I miss having something to look forward to.   ,Frustrated
+2025-02-28 16:30:03.466,  I wish people would just do their part.,Frustrated
+2025-02-28 16:56:27.147, Life feels like a beautiful adventure today.   ,Happy
+2025-02-12 14:32:58.000, I hate how things never go as planned.,Sad
+2025-02-28 16:31:21.495,My heart feels too heavy for my chest.,Frustrated
+2025-02-28 16:54:58.062, I feel at peace with myself. ,Frustrated
+2025-02-13 14:32:59.000, I just want something to go right for once.,Happy
+2025-02-28 17:57:04.696, I feel completely content in this moment.   ,Happy
+2025-02-28 16:42:55.471,"  I keep listening to sad songs, making it worse.   ",Sad
+2025-02-28 17:39:46.873,"I sit in the canteen, surrounded by people, but I feel alone. Everyone is laughing, talking, living—while I just watch. I look at old photos and wonder when everything changed. I force a smile, even though I don’t really feel it.",Sad
+2025-02-28 17:28:24.223,  I found joy in something simple today.  ,Happy
+2025-02-13 14:32:59.000,I feel like I’m trapped inside my own thoughts.,Frustrated
+2025-02-28 17:19:24.243," I did something kind today, and it made me feel amazing.  ",Happy
+2025-02-28 16:47:10.065,  I feel like sadness is the only thing that stays.   ,Sad
+2025-02-28 16:50:46.935,I love the way my favorite food tastes.  ,Happy
+2025-02-28 17:54:33.681, I found joy in something simple today.  ,Happy
+2025-02-28 17:55:11.993,I love when everything just feels right.,Happy
+2025-02-28 16:44:44.716," I don’t want to be alone, but I don’t want to talk either. ",Sad
+2025-02-12 14:32:58.000," My heart skipped a beat, and now I’m panicking.",Anxious
+2025-02-28 17:27:23.018," I got good news, and I can’t stop smiling.  ",Happy
+2025-02-28 17:07:57.612," I had an amazing meal today, and it made me so happy.  ",Happy
+2025-02-12 14:32:49.000,  I don’t know how to let go of this fear.,Anxious
+2025-02-12 14:32:30.000, I’m overthinking every little thing I said today.,Anxious
+2025-02-13 14:33:01.000,I wish I could stop panicking over things that don’t matter.,Anxious
+2025-02-28 16:42:48.615,I wish I could go back in time and do things differently.   ,Frustrated
+2025-02-28 16:40:32.931, I’m tired of waiting for things to get better.  ,Frustrated
+2025-02-13 14:33:00.000, I hate when I work hard and get no recognition.   Why do people always assume I’ll fix everything,Sad
+2025-02-12 14:32:49.000,  I don’t know how to let go of this fear.,Anxious
+2025-02-28 17:41:35.685,My heart feels warm and safe. ,Happy
+2025-02-28 16:47:23.955," I keep pretending I’m okay, but I’m not. ",Happy
+2025-02-28 16:42:10.430," I hate that I feel this way, but I don’t know how to stop.  ",Sad
+2025-02-12 14:32:30.000, I feel like I’m stuck in a loop of worry.,Frustrated
+2025-02-28 16:30:57.196,I’m so tired of arguing over the same things.,Frustrated
+2025-02-12 14:32:58.000," My heart skipped a beat, and now I’m panicking.",Anxious
+2025-02-28 16:30:33.941,"I feel like I’m always saying ""I’m fine"" when I’m not.",Happy
+2025-02-13 14:32:59.000," I feel like I’m sinking, and no one notices.",Frustrated
+2025-02-28 16:41:19.354, I miss the version of me that wasn’t so sad.  ,Sad
+2025-02-28 16:44:36.387,  I wish I knew how to fix myself.  ,Frustrated
+2025-02-28 17:28:31.130, I love the way coffee tastes on a slow morning. ,Happy
+2025-02-28 16:30:38.602, I feel like I can’t win no matter what I do.,Happy
+2025-02-28 16:46:05.099,  I feel like I’m falling behind in life. ,Sad
+2025-02-13 14:33:00.000, I feel like I’m fighting a battle I can’t win.,Happy
+2025-02-28 16:33:45.343,"I’m in a crowded room, but I feel completely alone.",Sad
+2025-02-13 14:32:59.000,Why does everything have to be so complicated?,Sad
+2025-02-28 17:50:17.357, I love how happiness feels in my chest.  ,Happy
+2025-02-28 17:05:47.132,I hate when people don’t appreciate the effort I put in.,Sad
+2025-02-12 14:32:58.000,I hate the way my body reacts to stress.,Anxious
+2025-02-28 17:18:50.697," I hate when my hands shake, and I can’t hide it.",Sad
+2025-02-28 17:55:35.920, I laughed so hard I couldn’t breathe.   ,Happy
+2025-02-28 17:03:46.400,I keep checking things over and over again.,Frustrated
+2025-02-28 16:40:17.840,"I feel like I’m drowning, but no one sees it.",Frustrated
+2025-02-13 14:33:00.000,  I don’t know why I feel so tense.,Anxious
+2025-02-28 16:31:57.544," I feel like I’m falling behind, even when I’m doing my best.",Happy
+2025-02-28 17:57:57.492, I love the way the world smells after it rains.   ,Happy
+2025-02-28 16:42:10.430," I hate that I feel this way, but I don’t know how to stop.  ",Sad
+2025-02-28 17:19:29.380,"  I keep telling myself it’s just anxiety, but it still feels real.",Frustrated
+2025-02-28 16:42:22.009, I feel like I’m disappointing everyone. ,Sad
+2025-02-28 16:50:26.126,My favorite song came on at the perfect time.  ,Happy
+2025-02-12 14:32:30.000,I hate how unpredictable anxiety is.,Sad
+2025-02-28 16:44:29.690, I keep apologizing for feeling this way.   ,Frustrated
+2025-02-12 14:32:49.000, I hate being ignored.,Sad
+2025-02-28 17:06:54.707,"I hate that I can’t control everything, even when I try.",Sad
+2025-02-12 14:32:58.000,  It shouldn’t be this hard!,Sad
+2025-02-12 14:32:30.000, I’m so worried about things I can’t control.,Anxious
+2025-02-13 14:33:00.000,  I don’t know why I feel so tense.,Anxious
+2025-02-13 14:33:00.000,"Today was heavy, and I don’t know why.",Frustrated
+2025-02-12 14:32:58.000," I keep trying to distract myself, but nothing helps.",Frustrated
+2025-02-13 14:33:00.000, I hate how my anxiety makes small things feel huge.,Sad
+2025-02-12 14:32:30.000, I just want to scream.,Frustrated
+2025-02-13 14:33:00.000,  I don’t know why I feel so tense.,Anxious
+2025-02-28 16:30:30.236,  I hate how stress and frustration go hand in hand.,Anxious
+2025-02-28 16:42:27.123,"  I don’t want to cry, but I can’t help it.  ",Sad
+2025-02-12 14:32:58.000,I just want to feel normal again.,Frustrated
+2025-02-13 14:33:00.000, I hate how my anxiety makes small things feel huge.,Sad
+2025-02-13 14:33:00.000,  I don’t know why I feel so tense.,Anxious
+2025-02-13 14:33:01.000, I hate how my anxiety makes me doubt everything.,Sad
+2025-02-28 17:26:11.319, I wish people would stop testing my patience.,Frustrated
+2025-02-12 14:32:30.000, I’m overthinking every little thing I said today.,Anxious
+2025-02-28 17:37:15.310, I love feeling the grass under my bare feet.  ,Happy
+2025-02-13 14:33:00.000, I wish I could stop obsessing over every little detail,Frustrated
+2025-02-28 16:30:30.236,  I hate how stress and frustration go hand in hand.,Anxious
+2025-02-28 17:51:01.944, I love how laughter brings people together.  ,Happy
+2025-02-12 14:32:58.000,I hate feeling like I have no control.,Sad
+2025-02-28 16:51:52.022, I feel like I’m glowing from the inside out.,Frustrated
+2025-02-28 16:42:27.123,"  I don’t want to cry, but I can’t help it.  ",Sad
+2025-02-28 16:36:45.937,I wish I could stop overthinking everything.,Anxious
+2025-02-28 16:47:03.830,I want to feel something other than this emptiness.   ,Frustrated
+2025-02-13 14:33:01.000, I can’t believe I have to deal with this again.,Frustrated
+2025-02-28 17:04:09.203, I keep thinking about that one embarrassing moment from years ago.,Frustrated
+2025-02-13 14:32:59.000,I just want to be done with all of this.,Frustrated
+2025-02-28 17:07:40.962,  I feel like I’m always dealing with the same issues.,Frustrated
+2025-02-28 16:34:32.052,It’s hard to pretend I don’t feel broken.,Sad
+2025-02-13 14:32:59.000,I wish I could turn my brain off for a while.,Frustrated
+2025-02-28 16:30:30.236,  I hate how stress and frustration go hand in hand.,Anxious
+2025-02-28 16:53:09.654," I feel free, like I could run forever. ",Happy
+2025-02-28 16:37:11.509,"I want to be alone, but I don’t want to feel lonely. ",Sad
+2025-02-12 14:32:49.000,  I don’t know how to let go of this fear.,Anxious
+2025-02-13 14:33:00.000, I hate how my anxiety makes small things feel huge.,Sad
+2025-02-28 17:28:37.138,  My favorite person made me laugh today.  ,Frustrated
+2025-02-28 16:30:30.236,  I hate how stress and frustration go hand in hand.,Anxious
+2025-02-28 17:56:28.124, My heart feels warm and safe.  ,Happy
+2025-02-28 16:45:59.809,  I hate that I let people hurt me so easily. ,Sad
+2025-02-28 16:33:45.343,"I’m in a crowded room, but I feel completely alone.",Sad
+2025-02-13 14:32:59.000, I feel like I’m constantly preparing for the worst.,Sad
+2025-02-28 16:57:16.307," Today felt lighter, like a breath of fresh air. ",Happy
+2025-02-28 16:30:30.236,  I hate how stress and frustration go hand in hand.,Anxious
+2025-02-12 14:32:30.000, I’m so worried about things I can’t control.,Anxious
+2025-02-28 17:05:15.770,  I hate how I always expect the worst.,Sad
+2025-02-12 14:32:30.000,I hate that my anxiety makes me doubt myself.,Sad
+2025-02-28 17:06:16.834,I hate when people don’t respect boundaries.,Sad
+2025-02-28 16:50:12.165,I love the way fresh flowers make a room feel alive.  ,Happy
+2025-02-28 16:30:30.236,  I hate how stress and frustration go hand in hand.,Anxious
+2025-02-12 14:32:30.000," I keep trying to stay calm, but it’s not working.",Happy
+2025-02-28 17:37:09.586," Today was a good day, and I’m thankful for it.  ",Happy
+2025-02-13 14:33:00.000,  I don’t know why I feel so tense.,Anxious
+2025-02-13 14:33:01.000,I wish I could stop panicking over things that don’t matter.,Anxious
+2025-02-12 14:32:49.000,It’s so frustrating when people don’t keep their promises.,Sad
+2025-02-13 14:33:00.000,I feel like I’m constantly being misunderstood.,Frustrated
+2025-02-12 14:32:30.000, I’m overthinking every little thing I said today.,Anxious
+2025-02-28 16:36:45.937,I wish I could stop overthinking everything.,Anxious
+2025-02-28 16:52:18.967,My cheeks hurt from smiling so much.  ,Sad
+2025-02-13 14:33:01.000, I don’t understand why this is so difficult.,Sad
+2025-02-28 17:03:25.082,I woke up feeling excited for the day ahead.  ,Happy
+2025-02-28 16:37:42.643,I feel like a burden.,Frustrated
+2025-02-28 17:17:58.827," I keep trying to calm down, but it’s not working.",Sad
+2025-02-12 14:32:30.000, I’m overthinking every little thing I said today.,Anxious
+2025-02-12 14:32:49.000,I hate when anxiety makes me feel physically sick,Sad
+2025-02-28 16:51:46.308,"   The sky is so blue, and it makes me happy.  ",Happy
+2025-02-28 17:55:23.148,  I love the feeling of a fresh start.   ,Happy
+2025-02-28 17:56:36.882," I caught a stranger smiling at me, and it made me happy.  ",Happy
+2025-02-13 14:33:01.000,I wish I could stop panicking over things that don’t matter.,Anxious
+2025-02-12 14:32:58.000, I hate how things never go as planned.,Sad
+2025-02-28 16:51:15.606, I feel like dancing for no reason.  ,Frustrated
+2025-02-28 17:56:41.765,I feel light as a feather today.  ,Happy
+2025-02-28 16:47:10.065,  I feel like sadness is the only thing that stays.   ,Sad
+2025-02-12 14:32:49.000, My stomach is in knots for no reason.,Frustrated
+2025-02-28 16:45:15.592,I feel like I’m running out of reasons to keep going.  ,Frustrated
+2025-02-28 17:03:56.990, I feel like I’m forgetting something important.,Happy
+2025-02-12 14:32:58.000,I hate the way my body reacts to stress.,Anxious
+2025-02-28 16:34:01.435,The things that used to make me happy don’t anymore.,Happy
+2025-02-28 16:47:29.372, I don’t know how to be happy anymore.  ,Happy
+2025-02-28 17:36:52.790,"  I finally did something I was scared to do, and it felt amazing.  ",Happy
+2025-02-13 14:32:59.000,Why does everything have to be so complicated?,Sad
+2025-02-28 16:29:49.874, I hate how much effort it takes just to get basic things done.,Sad
+2025-02-12 14:32:30.000, I’m so worried about things I can’t control.,Anxious
+2025-02-12 14:32:49.000," I hate when people say, “Just calm down.”",Sad
+2025-02-28 17:05:47.132,I hate when people don’t appreciate the effort I put in.,Sad
+2025-02-13 14:33:01.000," I smiled, but it didn’t reach my heart.",Happy
+2025-02-12 14:32:30.000, I’m overthinking every little thing I said today.,Anxious
+2025-02-28 16:35:49.806,I wonder if anyone would notice if I wasn’t here.,Frustrated
+2025-02-12 14:32:58.000," My heart skipped a beat, and now I’m panicking.",Anxious
+2025-02-28 16:51:29.926, Everything is falling into place.  ,Frustrated
+2025-02-28 17:05:57.447,  I’m so over this whole situation.,Frustrated
+2025-02-13 14:32:59.000,I feel like I’m running out of time.,Frustrated
+2025-02-12 14:32:58.000," My heart skipped a beat, and now I’m panicking.",Anxious
+2025-02-28 16:45:39.373," Some days, even breathing feels hard. ",Sad
+2025-02-12 14:32:30.000,I hate how unpredictable anxiety is.,Sad
+2025-02-28 17:50:32.144, I caught a butterfly in my hands and let it go.  ,Frustrated
+2025-02-28 16:51:36.994, I feel like I’m living in a dream.  ,Frustrated
+2025-02-28 16:30:30.236,  I hate how stress and frustration go hand in hand.,Anxious
+2025-02-12 14:32:49.000,  I don’t know how to let go of this fear.,Anxious
+2025-02-28 17:29:19.285, I love when everything just feels right. ,Happy
+2025-02-12 14:32:49.000,I miss things I can’t even name.,Frustrated
+2025-02-13 14:33:00.000,  I don’t know why I feel so tense.,Anxious
+2025-02-12 14:32:49.000,  I don’t know how to let go of this fear.,Anxious
+2025-02-28 17:19:40.345, I feel like I’m stuck in a loop of worry.,Frustrated
+2025-02-28 16:36:45.937,I wish I could stop overthinking everything.,Anxious
+2025-02-28 16:36:45.937,I wish I could stop overthinking everything.,Anxious
+2025-02-28 17:57:50.698,I feel deeply connected to the people around me. ,Frustrated
+2025-02-28 17:17:58.827," I keep trying to calm down, but it’s not working.",Sad
+2025-02-13 14:33:00.000,  I don’t know why I feel so tense.,Anxious
+2025-02-12 14:32:30.000, I’m overthinking every little thing I said today.,Anxious
+2025-02-28 17:19:00.783, I keep overanalyzing every conversation.,Frustrated
+2025-02-12 14:32:49.000,I just want things to be simple for once.,Frustrated
+2025-02-28 16:44:13.742,I wish someone would ask me what’s wrong and really mean it.  ,Sad
+2025-02-28 17:37:21.633, I’m learning to let go and just enjoy the moment.  ,Happy
+2025-02-28 17:54:41.360,  I love the way coffee tastes on a slow morning.  ,Happy
+2025-02-28 17:04:18.100," I wish I could just relax, but I can’t.",Frustrated
+2025-02-28 16:32:37.643,I feel like everyone is secretly judging me.,Sad
+2025-02-12 14:32:30.000, I’m so worried about things I can’t control.,Anxious
+2025-02-13 14:32:59.000,I just want to walk away from all of this.,Frustrated
+2025-02-12 14:32:49.000,I hate when anxiety makes me feel physically sick,Sad
+2025-02-13 14:32:59.000,I feel like I’m constantly bracing for something bad.,Sad
+2025-02-28 16:30:30.236,  I hate how stress and frustration go hand in hand.,Anxious
+2025-02-12 14:32:49.000,  I don’t know how to let go of this fear.,Anxious
+2025-02-28 17:08:35.941,"  I saw someone else smiling, and it made me smile too. ",Frustrated
+2025-02-28 16:36:45.937,I wish I could stop overthinking everything.,Anxious
+2025-02-13 14:33:01.000,  I’m so done with this situation.,Frustrated
+2025-02-12 14:32:49.000,  I don’t know how to let go of this fear.,Anxious
+2025-02-13 14:33:01.000,I wish I could stop panicking over things that don’t matter.,Anxious
+2025-02-13 14:33:01.000,I wish I could stop panicking over things that don’t matter.,Anxious
+2025-02-28 17:18:50.697," I hate when my hands shake, and I can’t hide it.",Sad
+2025-02-13 14:33:00.000, I hate how my anxiety makes small things feel huge.,Sad
+2025-02-28 17:05:15.770,  I hate how I always expect the worst.,Sad
+2025-02-12 14:32:58.000,I hate the way my body reacts to stress.,Anxious
+2025-02-28 16:30:30.236,  I hate how stress and frustration go hand in hand.,Anxious
+2025-02-28 17:06:54.707,"I hate that I can’t control everything, even when I try.",Sad
+2025-02-12 14:32:58.000, I hate how things never go as planned.,Sad
+2025-02-13 14:33:00.000,  I don’t know why I feel so tense.,Anxious
+2025-02-28 16:47:37.082,I wish I could start over.  ,Frustrated
+2025-02-12 14:32:30.000, I’m so worried about things I can’t control.,Anxious
+2025-02-12 14:32:58.000, I hate how my mind creates problems that aren’t there.,Sad
+2025-02-12 14:32:49.000, I keep imagining worst-case scenarios,Frustrated
+2025-02-28 16:44:54.777, It’s hard to explain sadness when people expect you to be happy.  ,Happy
+2025-02-12 14:32:30.000, I’m overthinking every little thing I said today.,Anxious
+2025-02-28 16:34:09.253,I wish someone would see through my fake smiles.,Sad
+2025-02-13 14:33:01.000,I feel like I’m on edge all the time.,Frustrated
+2025-02-28 17:08:24.151,  I love the feeling of being completely myself.  ,Happy
+2025-02-12 14:32:49.000," I keep zoning out, lost in my worries.",Frustrated
+2025-02-28 17:55:48.967, I love feeling the grass under my bare feet.  ,Happy
+2025-02-28 17:57:27.022,   I felt pure happiness in a single moment today. ,Happy
+2025-02-12 14:32:58.000,I hate the way my body reacts to stress.,Anxious
+2025-02-28 17:18:19.373, I’m so afraid of disappointing people.,Sad
+2025-02-28 16:34:32.052,It’s hard to pretend I don’t feel broken.,Sad
+2025-02-28 16:55:11.821, I laughed with my whole heart today.  ,Happy
+2025-02-28 16:43:42.188,I miss feeling excited about life.   ,Happy
+2025-02-28 16:55:18.411,  I am proud of how far I’ve come.  ,Happy
+2025-02-28 16:42:55.471,"  I keep listening to sad songs, making it worse.   ",Sad
+2025-02-28 16:43:29.771,It hurts to be forgotten.  ,Sad
+2025-02-12 14:32:30.000,I’m so scared of embarrassing myself.,Frustrated
+2025-02-13 14:33:01.000, I keep waiting for the other shoe to drop.,Frustrated
+2025-02-12 14:32:49.000,  I don’t know how to let go of this fear.,Anxious
+2025-02-28 16:50:54.153, I found joy in the little things today.   ,Happy
+2025-02-28 17:18:04.223,  I love the sound of birds singing in the morning.  ,Happy
+2025-02-12 14:32:49.000,  I don’t know how to let go of this fear.,Anxious
+2025-02-28 16:36:45.937,I wish I could stop overthinking everything.,Anxious
+2025-02-28 16:33:35.602,I don’t know how to explain this emptiness.,Frustrated
+2025-02-28 16:46:05.099,  I feel like I’m falling behind in life. ,Sad
+2025-02-28 16:57:00.263, The sun feels extra warm on my skin today.  ,Happy
+2025-02-28 17:20:29.206, I’m learning to trust the process of life.  ,Frustrated
+2025-02-12 14:32:49.000,I hate being stuck in this never-ending cycle.,Sad
+2025-02-28 16:30:30.236,  I hate how stress and frustration go hand in hand.,Anxious
+2025-02-12 14:32:58.000," My heart skipped a beat, and now I’m panicking.",Anxious
+2025-02-28 16:38:16.354,I don’t know how to ask for help.,Frustrated
+2025-02-28 16:56:40.654,Music sounds even better when I’m happy.   ,Happy
+2025-02-13 14:33:00.000,  I don’t know why I feel so tense.,Anxious
+2025-02-28 16:37:22.602,The silence in my room feels louder than my thoughts.,Frustrated
+2025-02-28 16:51:58.959, I love the way laughter sounds.  ,Happy
+2025-02-28 16:30:30.236,  I hate how stress and frustration go hand in hand.,Anxious
+2025-02-28 16:37:00.390, I’m scared that this feeling will never go away.,Frustrated
+2025-02-28 17:05:47.132,I hate when people don’t appreciate the effort I put in.,Sad
+2025-02-12 14:32:49.000,It’s so frustrating when people don’t keep their promises.,Sad
+2025-02-28 17:17:29.263,  I love the way warm blankets feel on a chilly night. ,Happy
+2025-02-28 16:30:30.236,  I hate how stress and frustration go hand in hand.,Anxious
+2025-02-12 14:32:58.000,  I hate when people don’t take me seriously.,Sad
+2025-02-28 17:56:58.364,"Today was beautiful, and I am grateful.",Happy
+2025-02-28 16:50:18.593, I feel energized and full of life.   ,Happy
+2025-02-28 17:17:53.854, I found a song that perfectly matches my mood.  ,Happy
+2025-02-12 14:32:58.000," My heart skipped a beat, and now I’m panicking.",Anxious
+2025-02-13 14:32:59.000, I feel like I’m constantly preparing for the worst.,Sad
+2025-02-28 16:45:02.988,I keep searching for a feeling that never lasts.  ,Frustrated
+2025-02-28 16:47:17.948,  I wish I mattered more to the people I care about. ,Happy
+2025-02-13 14:33:01.000, I feel like I can’t breathe properly.,Frustrated
+2025-02-13 14:33:00.000,  I don’t know why I feel so tense.,Anxious
+2025-02-28 16:30:30.236,  I hate how stress and frustration go hand in hand.,Anxious
+2025-02-28 16:36:45.937,I wish I could stop overthinking everything.,Anxious
+2025-02-12 14:32:49.000,I hate being stuck in this never-ending cycle.,Sad
+2025-02-12 14:32:49.000, People keep pushing my buttons today.,Frustrated
+2025-02-28 16:46:05.099,  I feel like I’m falling behind in life. ,Sad
+2025-02-28 16:54:51.123,"  I have so many reasons to be happy, and I love that.  ",Happy
+2025-02-28 17:18:19.373, I’m so afraid of disappointing people.,Sad
+2025-02-28 17:07:15.573, I hate when I feel powerless to change things.,Sad
+2025-02-28 17:57:35.203, I love how life surprises me in the best ways.,Happy
+2025-02-28 17:57:43.694,  I saw something that made me laugh out loud.  ,Frustrated
+2025-02-28 17:19:56.222, I love how happiness feels in my chest.  ,Happy
+2025-02-12 14:32:30.000, I’m overthinking every little thing I said today.,Anxious
+2025-02-28 16:41:40.989, I just want to be okay again.  ,Happy
+2025-02-12 14:32:58.000, I hate how things never go as planned.,Sad
+2025-02-28 17:50:10.390," I did something kind today, and it made me feel amazing. ",Happy
+2025-02-12 14:32:58.000,I keep running worst-case scenarios in my head.,Frustrated
+2025-02-28 16:45:08.530," My heart aches, but I don’t know why.   ",Frustrated
+2025-02-12 14:32:30.000, I’m overthinking every little thing I said today.,Anxious
+2025-02-13 14:33:00.000,  I don’t know why I feel so tense.,Anxious
+2025-02-13 14:33:01.000," I feel like I’m spiraling, and I don’t know how to stop.",Frustrated
+2025-02-12 14:32:30.000, I’m sick of repeating myself.,Frustrated
+2025-02-12 14:32:30.000, I’m so worried about things I can’t control.,Anxious
+2025-02-12 14:32:58.000, I hate how my mind creates problems that aren’t there.,Sad
+2025-02-28 17:06:06.440," I just want a solution, not more problems.",Sad
+2025-02-28 16:30:30.236,  I hate how stress and frustration go hand in hand.,Anxious
+2025-02-13 14:32:59.000,"  I keep running through conversations in my head, over and over.",Frustrated
+2025-02-12 14:32:58.000," My heart skipped a beat, and now I’m panicking.",Anxious
+2025-02-28 16:46:50.792, I don’t know how to make this pain go away.  ,Frustrated
+2025-02-12 14:32:58.000, I keep second-guessing everything I do.,Frustrated
+2025-02-28 16:36:45.937,I wish I could stop overthinking everything.,Anxious
+2025-02-28 17:04:59.693,I wish I could just breathe normally.,Frustrated
+2025-02-13 14:33:01.000,I wish I could stop panicking over things that don’t matter.,Anxious
+2025-02-28 16:46:56.903,I hate how much I overthink everything.  ,Sad
+2025-02-28 16:37:11.509,"I want to be alone, but I don’t want to feel lonely. ",Sad
+2025-02-28 16:51:00.429, I’m learning to love myself more each day.  ,Happy
+2025-02-12 14:32:58.000,I hate the way my body reacts to stress.,Anxious
+2025-02-12 14:32:49.000," I hate when my hands shake, and I can’t hide it",Sad
+2025-02-28 16:30:30.236,  I hate how stress and frustration go hand in hand.,Anxious
+2025-02-12 14:32:30.000, I’m overthinking every little thing I said today.,Anxious
+2025-02-28 16:43:07.508, I used to dream more than I do now.  ,Happy
+2025-02-28 16:52:54.004, I love the feeling of the wind in my hair.  ,Happy
+2025-02-28 16:53:45.952, I had a really good conversation that made my day.   ,Happy
+2025-02-13 14:33:01.000,I just need a moment of peace.,Frustrated
+2025-02-28 17:49:54.441," I caught a stranger smiling at me, and it made me happy.   ",Happy
+2025-02-28 16:56:13.554, I love the way the world looks when I’m in a good mood.  ,Happy
+2025-02-12 14:32:49.000,I hate being stuck in this never-ending cycle.,Sad
+2025-02-28 17:56:07.856,  The stars looked extra bright tonight.  ,Happy
+2025-02-12 14:32:58.000,I hate the way my body reacts to stress.,Anxious
+2025-02-28 16:38:38.256, I don’t have the energy to pretend today. ,Frustrated
+2025-02-28 17:41:16.452,  I’m excited for what the future holds.  ,Happy
+2025-02-28 17:17:50.350,  I feel like I’m failing at everything.,Frustrated
+2025-02-28 17:21:32.365,  I love the way my favorite book makes me feel.  ,Happy
+2025-02-28 16:30:47.179,I just want to get this over with.,Frustrated
+2025-02-12 14:32:58.000," My heart skipped a beat, and now I’m panicking.",Anxious
+2025-02-12 14:32:30.000, I’m overthinking every little thing I said today.,Anxious
+2025-02-28 17:50:39.543, I love the way my favorite book makes me feel.  ,Happy
+2025-02-12 14:32:30.000, I’m so worried about things I can’t control.,Anxious
+2025-02-28 16:53:39.066,My heart is so full it could burst.  ,Happy
+2025-02-12 14:32:58.000," My heart skipped a beat, and now I’m panicking.",Anxious
+2025-02-28 16:41:55.384,I keep hoping someone will notice I’m not okay.  ,Sad
+2025-02-13 14:33:01.000,"My body is exhausted, but my mind won’t let me rest.",Frustrated
+2025-02-28 16:40:55.225,I hate pretending everything is fine.  ,Frustrated
+2025-02-28 16:45:39.373," Some days, even breathing feels hard. ",Sad
+2025-02-12 14:32:30.000, I’m so worried about things I can’t control.,Anxious
+2025-02-12 14:32:58.000,"I feel like I’m sinking, and no one notices.",Frustrated
+2025-02-12 14:32:30.000, I’m so worried about things I can’t control.,Anxious
+2025-02-28 16:36:45.937,I wish I could stop overthinking everything.,Anxious
+2025-02-28 16:56:06.114, Small things bring me so much joy.  ,Happy
+2025-02-28 16:31:33.638, I wish people would stop making excuses.,Frustrated
+2025-02-12 14:32:49.000,I feel like I’m losing control of my own emotions.,Happy
+2025-02-12 14:32:30.000,I hate that my anxiety makes me doubt myself.,Sad
+2025-02-12 14:32:58.000, I hate when people waste my time.,Sad
+2025-02-28 17:37:47.441,I just want some peace and quiet.,Frustrated
+2025-02-28 17:26:20.370, I hate when people don’t take responsibility.,Sad
+2025-02-12 14:32:49.000,I hate how long everything takes.,Sad
+2025-02-28 16:51:09.422," I made someone smile today, and that made me happy.  ",Happy
+2025-02-28 17:18:49.548, I had the best conversation with an old friend. ,Happy
+2025-02-28 17:54:47.134, My favorite person made me laugh today. ,Frustrated
+2025-02-13 14:33:00.000,  I don’t know why I feel so tense.,Anxious
+2025-02-12 14:32:58.000,I hate the way my body reacts to stress.,Anxious
+2025-02-28 17:29:13.116,  I caught the perfect sunset today.  ,Happy
+2025-02-13 14:33:01.000,I wish I could stop panicking over things that don’t matter.,Anxious
+2025-02-13 14:32:59.000, I feel like I’m constantly preparing for the worst.,Sad
+2025-02-12 14:32:30.000, I’m overthinking every little thing I said today.,Anxious
+2025-02-28 16:45:39.373," Some days, even breathing feels hard. ",Sad
+2025-02-13 14:33:01.000,"Today was heavy, and I don’t know why.",Frustrated
+2025-02-12 14:32:49.000,  I don’t know how to let go of this fear.,Anxious
+2025-02-13 14:33:00.000,My hands won’t stop shaking.,Frustrated
+2025-02-12 14:32:58.000," My heart skipped a beat, and now I’m panicking.",Anxious
+2025-02-12 14:32:30.000, I’m overthinking every little thing I said today.,Anxious
+2025-02-28 16:32:11.405, I’m so afraid of making a mistake.,Sad
+2025-02-12 14:32:49.000, I hate being ignored.,Sad
+2025-02-12 14:32:49.000,It’s so frustrating when people don’t keep their promises.,Sad
+2025-02-28 16:35:23.475,It feels like I’m watching my life instead of living it.,Frustrated
+2025-02-28 17:55:42.785," Today was a good day, and I’m thankful for it.  ",Happy
+2025-02-28 16:31:43.505,"I don’t know why I feel this way, but I do.",Frustrated
+2025-02-28 17:52:00.911, I feel like I’m glowing with happiness.  ,Happy
+2025-02-28 17:07:06.172, I just want to fix everything and move on.,Frustrated
+2025-02-13 14:33:00.000, I don’t know why I feel so guilty all the time.,Sad
+2025-02-12 14:32:30.000, I hate how people act like my feelings don’t matter.,Sad
+2025-02-13 14:33:01.000,Nothing seems to be working out the way I want it to.,Frustrated
+2025-02-28 16:55:43.058, I can’t stop humming my favorite song.  ,Happy
+2025-02-28 16:42:27.123,"  I don’t want to cry, but I can’t help it.  ",Sad
+2025-02-28 16:40:40.515,  I wish I could love myself the way I love others.  ,Happy
+2025-02-12 14:32:49.000,I feel like I’m drowning in my own thoughts.,Happy
+2025-02-12 14:32:58.000,I hate the way my body reacts to stress.,Anxious
+2025-02-28 17:55:17.596,I feel like I could hug the whole world.   ,Frustrated
+2025-02-28 17:56:01.256, I’m learning to let go and just enjoy the moment.  ,Happy

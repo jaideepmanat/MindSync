@@ -19,7 +19,6 @@ if ($_SESSION['user_type'] !== 'consultant' && basename(__FILE__) === 'home2.php
 }
 ?>
 
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -36,10 +35,9 @@ if ($_SESSION['user_type'] !== 'consultant' && basename(__FILE__) === 'home2.php
             <h1>MindSync</h1>
         </div>
         <div class="right">
-        <div class="mailbox" onclick="window.location.href='mail.php';">
-            <span>&#9993;</span>
-        </div>
-
+            <div class="mailbox" onclick="window.location.href='mail.php';">
+                <span>&#9993;</span>
+            </div>
             <img src="https://cdn-icons-png.flaticon.com/512/147/147142.png" alt="User Icon" class="user-icon" id="user-icon">
             <div class="dropdown" id="dropdown-menu">
                 <a href="Profile.php">View Profile</a>
@@ -71,8 +69,12 @@ if ($_SESSION['user_type'] !== 'consultant' && basename(__FILE__) === 'home2.php
             <p>Join our community and share your experiences and support others.</p>
             <button onclick="location.href='CommunityUser.php';">Community</button>
         </div>
+        <div class="card">
+            <img src="image4.jpeg" alt="Journal Image" class="card-image">
+            <p>Write or record your thoughts, and let our AI analyze your mood.</p>
+            <button onclick="location.href='journal.php';">Enter Journal</button>
+        </div>
     </section>
-    
 
     <script src="home1.js"></script>
 </body>
