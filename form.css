@@ -1,0 +1,183 @@
+/* Reset Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif; /* Modern font */
+}
+
+/* Body Styling */
+body {
+    background-color: #121212; /* Dark background for sleek design */
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
+    padding-top: 80px; /* Space for fixed navbar */
+}
+
+/* Navbar */
+nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: #0a0a0a;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+nav .left h1 {
+    color: #00ff00;
+    font-size: 24px;
+}
+
+nav .right {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+nav .right .mailbox {
+    font-size: 30px;
+    margin-right: 25px;
+    cursor: pointer;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+nav .right .mailbox:hover {
+    color: #00ff00;
+    transform: scale(1.1);
+}
+
+nav .right .user-icon {
+    width: 40px;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+nav .right .user-icon:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 8px #00ff00;
+}
+
+nav .right .dropdown {
+    display: none;
+    position: absolute;
+    top: 50px;
+    right: 0;
+    background-color: #333;
+    padding: 10px;
+    border-radius: 5px;
+    width: 150px;
+    z-index: 100;
+}
+
+nav .right .dropdown a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    display: block;
+    padding: 5px 0;
+}
+
+nav .right .dropdown a:hover {
+    color: #00ff00;
+}
+
+/* Form Container */
+.form-container {
+    background-color: #1e1e1e;
+    border: 2px solid #00ff00;
+    border-radius: 12px; /* Smoother corners for a modern look */
+    padding: 30px;
+    max-width: 600px; /* Slightly wider for better spacing */
+    width: 90%; /* Adapt to smaller screens */
+    box-shadow: 0 8px 20px rgba(0, 255, 0, 0.2); /* Subtle green glow */
+    margin: 20px auto;
+    text-align: left;
+}
+
+/* Form Styling */
+.form-container h2 {
+    color: #00ff00;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px; /* Larger for emphasis */
+    text-transform: uppercase;
+    letter-spacing: 1px; /* Subtle spacing for modern look */
+}
+
+form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #ffffff;
+    font-size: 14px;
+}
+
+form input[type="number"],
+form select {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #00ff00;
+    border-radius: 8px; /* Rounded for a polished look */
+    background-color: #262626;
+    color: #ffffff;
+    font-size: 14px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+form input[type="number"]:focus,
+form select:focus {
+    border-color: #00ff00;
+    box-shadow: 0 0 8px rgba(0, 255, 0, 0.5); /* Green glow for focus */
+    outline: none;
+}
+
+form input[type="submit"] {
+    width: 100%;
+    padding: 15px;
+    background-color: #00ff00;
+    color: #000000;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+form input[type="submit"]:hover {
+    background-color: #00cc00;
+    transform: scale(1.02); /* Slight scaling for hover effect */
+    box-shadow: 0 6px 15px rgba(0, 255, 0, 0.5); /* Glow effect */
+}
+
+/* Form Input Placeholder Styling */
+form input::placeholder,
+form select option {
+    color: #bbbbbb; /* Subtle placeholder text */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .form-container {
+        padding: 20px; /* Reduced padding for smaller screens */
+    }
+
+    form label {
+        font-size: 12px; /* Adjust label size */
+    }
+
+    form input[type="submit"] {
+        padding: 12px; /* Adjust button padding */
+        font-size: 14px; /* Adjust font size */
+    }
+}

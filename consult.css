@@ -1,0 +1,309 @@
+/* General Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #121212;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Navbar */
+nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: #0a0a0a;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+}
+
+nav .left h1 {
+    color: #00ff00;
+}
+
+nav .right {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+nav .right .mailbox {
+    font-size: 30px;
+    margin-right: 25px;
+    cursor: pointer;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+nav .right .mailbox:hover {
+    color: #00ff00;
+    transform: scale(1.1);
+}
+
+nav .right .user-icon {
+    width: 40px;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+
+nav .right .user-icon:hover {
+    transform: scale(1.1);
+}
+
+nav .right .dropdown {
+    display: none;
+    position: absolute;
+    top: 50px;
+    right: 0;
+    background-color: #333;
+    padding: 10px;
+    border-radius: 5px;
+    width: 150px;
+}
+
+nav .right:hover .dropdown {
+    display: block;
+}
+
+nav .right .dropdown a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    display: block;
+    padding: 5px 0;
+}
+
+nav .right .dropdown a:hover {
+    color: #00ff00;
+}
+
+/* Cards Section */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    width: 100%;
+    max-width: 1200px;
+    padding: 80px 20px;
+    margin-top: 50px; /* Offset for navbar */
+}
+
+.card {
+    background-color: #1e1e1e;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 255, 0, 0.2);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 255, 0, 0.5);
+}
+
+.card p {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Stars Section */
+.stars {
+    color: #f39c12;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+/* Button Styling */
+.card button {
+    padding: 10px 20px;
+    background-color: #00ff00;
+    border: none;
+    color: black;
+    font-weight: bold;
+    border-radius: 5px;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.card button:hover {
+    background-color: #121212;
+    color: #00ff00;
+    border: 2px solid #00ff00;
+}
+
+.book-button[disabled] {
+    background-color: #666;
+    color: white;
+    cursor: not-allowed;
+}
+
+.message-button {
+    margin-top: 5px;
+    background-color: #007bff;
+    color: white;
+    transition: background-color 0.3s ease;
+}
+
+.message-button:hover {
+    background-color: #0056b3;
+}
+
+.rate-button {
+    background-color: #ffcc00;
+    color: black;
+}
+
+.rate-button:hover {
+    background-color: #ffaa00;
+}
+
+/* Message Form */
+.message-form {
+    display: none; /* Hidden by default */
+    margin-top: 15px;
+    width: 100%; /* Ensure it fits the card width */
+}
+
+.message-input-row {
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap within the card */
+    gap: 10px; /* Add consistent spacing between items */
+    align-items: center; /* Align items vertically */
+    justify-content: space-between; /* Distribute items evenly */
+    margin-top: 10px; /* Add spacing above the row */
+}
+
+.message-input-row input {
+    flex-grow: 1; /* Allow the input box to take available space */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #262626;
+    color: white;
+    font-size: 14px;
+    min-width: 150px; /* Prevent the input from shrinking too small */
+}
+
+.message-button-submit,
+.message-button-cancel {
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    flex-shrink: 0; /* Prevent buttons from shrinking */
+    min-width: 80px; /* Set a minimum width for buttons */
+}
+
+.message-button-submit {
+    background-color: #00ff00;
+    color: black;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.message-button-submit:hover {
+    background-color: #1a1a1a;
+    color: #00ff00;
+    border: 2px solid #00ff00;
+}
+
+.message-button-cancel {
+    background-color: #ff0000;
+    color: white;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.message-button-cancel:hover {
+    background-color: #1a1a1a;
+    color: #ff0000;
+    border: 2px solid #ff0000;
+}
+
+/* Popup Styling */
+#rate-popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #1e1e1e;
+    padding: 20px;
+    border: 2px solid #00ff00;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 255, 0, 0.5);
+    width: 90%;
+    max-width: 400px;
+}
+
+#rate-popup h3 {
+    color: #00ff00;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.rating {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.rating input {
+    display: none;
+}
+
+.rating label {
+    color: #ccc;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.rating label:hover,
+.rating label:hover ~ label,
+.rating input:checked ~ label {
+    color: #f39c12;
+}
+
+.popup-button {
+    padding: 10px 15px;
+    background-color: #00ff00;
+    border: none;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease, border 0.3s ease;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.popup-button:hover {
+    background-color: #121212;
+    color: #00ff00;
+    border: 2px solid #00ff00;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .cards {
+        grid-template-columns: 1fr; /* Single column for smaller screens */
+        gap: 20px;
+    }
+
+    .card button {
+        width: 100%; /* Full-width buttons for smaller screens */
+    }
+
+    #rate-popup {
+        width: 95%;
+    }
+}

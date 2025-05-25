@@ -1,0 +1,280 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Navbar (Unchanged) */
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 25px;
+    background-color: #0a0a0a;
+    z-index: 1000;
+}
+
+nav .left h1 {
+    color: #00ff00;
+    font-family: 'Poppins', sans-serif;
+}
+
+nav .right {
+    position: relative;
+    align-items: center;
+    display: flex;
+}
+
+nav .right .admin {
+    font-size: 15px;
+    margin-right: 25px;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+nav .right .user-icon {
+    width: 40px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+nav .right .dropdown {
+    display: none;
+    position: absolute;
+    top: 50px;
+    right: 0;
+    background-color: #333;
+    padding: 10px;
+    border-radius: 5px;
+    width: 150px;
+}
+
+nav .right .dropdown a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    display: block;
+    padding: 5px 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+nav .right .dropdown a:hover {
+    color: #00ff00;
+}
+
+/* Body and Global Font */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #121212; /* Darker background for a modern feel */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    margin-top: 70px; /* Prevent overlap with navbar */
+}
+
+/* Table Container */
+.table-container {
+    width: 85%; /* Slightly wider for better readability */
+    max-width: 900px;
+    min-width: 500px;
+    overflow-x: auto;
+    background-color: #1e1e1e;
+    border-radius: 10px; /* More rounded corners */
+    box-shadow: 0 4px 15px rgba(0, 250, 0, 0.2); /* Softer shadow */
+    padding: 20px;
+    margin-top: 25px; /* Spacing below navbar */
+}
+
+/* Table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    background-color: #2c2c2c; /* Subtle contrast for table */
+    border-radius: 8px; /* Rounded corners for table */
+    overflow: hidden; /* Ensure rounded corners apply */
+}
+
+thead {
+    background-color: #333; /* Header background */
+    border: 2px solid rgba(0, 250, 0, 0.4);
+    color: white; /* White text for better readability */
+}
+
+th, td {
+    padding: 15px;
+    border-bottom: 1px solid #444; /* Subtle divider for rows */
+}
+
+thead th {
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
+    text-transform: uppercase; /* Professional touch */
+}
+
+tbody td {
+    color: #e0e0e0; /* Softer white for table text */
+    font-family: 'Poppins', sans-serif;
+}
+
+tbody td:nth-child(3) {
+    font-size: 24px; /* Slightly reduced for better alignment */
+    text-align: center;
+    cursor: pointer;
+    color: #00ff00; /* Green for document icon */
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+tbody td:nth-child(3):hover {
+    transform: scale(1.2); /* Smooth scaling effect */
+    color: #ffffff; /* White on hover */
+}
+
+tbody tr:hover {
+    background-color: rgba(0, 250, 0, 0.1); /* Highlight row on hover */
+}
+
+tbody tr:nth-child(even) {
+    background-color: #2a2a2a; /* Subtle alternating row color */
+}
+
+tbody td:nth-child(4) {
+    text-align: center;
+}
+
+tbody td:nth-child(4) button {
+    margin-top: 10px;
+    margin-right: 5px; /* Spacing between buttons */
+}
+
+/* Buttons */
+.tick {
+    padding: 10px 25px;
+    background-color: #00ff00;
+    border: none;
+    color: black;
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+    font-family: 'Poppins', sans-serif;
+}
+
+.tick:hover {
+    background-color: #1a1a1a;
+    color: #00ff00;
+    transform: scale(1.05); /* Smooth hover scaling */
+    border: 2px solid #00ff00;
+}
+
+.cross {
+    padding: 10px 25px;
+    background-color: #ff4d4d; /* Softer red */
+    border: none;
+    color: black;
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+    font-family: 'Poppins', sans-serif;
+}
+
+.cross:hover {
+    background-color: #1a1a1a;
+    color: #ff4d4d;
+    transform: scale(1.05); /* Smooth hover scaling */
+    border: 2px solid #ff4d4d;
+}
+
+/* Popup Box */
+.popup-box {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #2c2c2c; /* Darker popup background */
+    padding: 25px;
+    box-shadow: 0 4px 15px rgba(0, 250, 0, 0.2); /* Softer shadow */
+    z-index: 1000;
+    border-radius: 10px; /* Rounded corners */
+    max-width: 80%;
+    max-height: 80%;
+    overflow: auto;
+    color: white;
+}
+
+.popup-box .popup-content img {
+    max-width: 100%; /* Ensure image fits in popup */
+    height: auto;
+    border-radius: 5px;
+}
+
+.popup-box .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+    background: none;
+    border: none;
+    transition: color 0.3s ease;
+}
+
+.popup-box .close-btn:hover {
+    color: #00ff00;
+}
+
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 999;
+}
+
+/* Status Indicators */
+.status {
+    font-weight: bold;
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+.status.accepted {
+    color: #ffffff;
+    background-color: #28a745; /* Green for accepted */
+}
+
+.status.rejected {
+    color: #ffffff;
+    background-color: #dc3545; /* Red for rejected */
+}
+
+/* Mobile View */
+@media screen and (max-width: 768px) {
+    .table-container {
+        width: 95%; /* Adjust container width */
+    }
+
+    tbody td:nth-child(3) {
+        font-size: 20px;
+    }
+
+    .tick, .cross {
+        padding: 8px 15px;
+        font-size: 12px; /* Smaller buttons for mobile */
+    }
+}

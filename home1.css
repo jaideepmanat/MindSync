@@ -1,0 +1,245 @@
+/* General Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body, html {
+    height: 100%;
+}
+
+body {
+    background-color: #121212; /* A deeper black for a sleeker design */
+    color: white;
+    display: flex;
+    flex-direction: column;
+    line-height: 1.6; /* Better readability */
+}
+
+/* Navbar */
+nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: #0a0a0a;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
+}
+
+nav .left h1 {
+    color: #00ff00;
+    font-size: 24px; /* Slightly larger font for prominence */
+}
+
+nav .right {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+nav .right .mailbox {
+    font-size: 24px;
+    margin-right: 25px; 
+    cursor: pointer;
+    color: white;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+nav .right .mailbox:hover {
+    color: #00ff00;
+    transform: scale(1.1);
+}
+
+nav .right .user-icon {
+    width: 40px;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+nav .right .user-icon:hover {
+    box-shadow: 0 0 10px #00ff00; /* Glow effect on hover */
+    transform: scale(1.1); /* Slight scaling for emphasis */
+}
+
+nav .right .dropdown {
+    display: none;
+    position: absolute;
+    top: 50px;
+    right: 0;
+    background-color: #262626;
+    padding: 15px;
+    border-radius: 5px;
+    width: 180px;
+    box-shadow: 0 4px 15px rgba(0, 255, 0, 0.2); /* Softer shadow */
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+nav .right .dropdown a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    display: block;
+    padding: 8px 0;
+}
+
+nav .right .dropdown a:hover {
+    color: #00ff00;
+}
+
+/* Quotes Section */
+.quotes {
+    text-align: center;
+    font-size: 28px;
+    margin: 30px 0;
+    font-weight: 600;
+    color: #00ff00; /* Highlight motivational quotes */
+    text-shadow: 0 0 10px rgba(0, 255, 0, 0.5); /* Subtle glow effect */
+}
+
+/* Cards Section */
+.cards {
+    display: flex;
+    justify-content: space-around;
+    align-items: stretch;
+    flex-grow: 1;
+    gap: 20px;
+    padding: 30px;
+}
+
+.card {
+    background-color: #1e1e1e;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    padding: 25px;
+    border-radius: 12px; /* Rounded corners for modern design */
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 255, 0, 0.3); /* Enhanced shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px) scale(1.02); /* Smooth lift and scale */
+    box-shadow: 0 8px 20px rgba(0, 255, 0, 0.5); /* More pronounced shadow */
+    background-color: #262626; /* Slightly lighter background on hover */
+}
+
+.card img {
+    width: 100%; 
+    aspect-ratio: 16 / 9; 
+    object-fit: cover;
+    margin-bottom: 20px; 
+    border-radius: 8px; /* Rounded edges for a smoother look */
+    filter: grayscale(50%); /* Slight grayscale for consistency */
+    transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+.card img:hover {
+    filter: grayscale(0); /* Remove grayscale on hover */
+    transform: scale(1.05); /* Slight zoom effect */
+}
+
+.card p {
+    margin-bottom: 15px;
+    font-size: 16px;
+    color: #d3d3d3; /* Softer white for text */
+    line-height: 1.5; /* Better readability */
+}
+
+/* Button Styling */
+.card button {
+    padding: 12px 25px;
+    background-color: #00ff00;
+    border: none;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+.card button:hover {
+    background-color: #1a1a1a;
+    color: #00ff00;
+    transform: scale(1.1); /* Slight scaling for hover effect */
+    border: 2px solid #00ff00;
+}
+
+/* Feedback Section */
+.feedback-row td {
+    padding: 10px;
+}
+
+.feedback-form {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+}
+
+.feedback-textarea {
+    width: 70%;
+    height: 50px; 
+    resize: vertical; 
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #333;
+    background-color: #262626;
+    color: white;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.feedback-textarea:focus {
+    background-color: #333;
+    outline: none;
+    transform: scale(1.02); /* Subtle scaling for focus */
+}
+
+.feedback-form button {
+    padding: 10px 20px;
+    background-color: #00ff00;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.feedback-form button:hover {
+    background-color: #1a1a1a;
+    color: #00ff00;
+    transform: scale(1.1);
+}
+
+.feedback-form .cancel-feedback {
+    background-color: #ff4d4d;
+    color: white;
+}
+
+.feedback-form .cancel-feedback:hover {
+    background-color: #1a1a1a;
+    color: #ff4d4d;
+}
+
+/* Media Query for Mobile View */
+@media (max-width: 768px) {
+    .cards {
+        flex-direction: column;
+        height: auto;
+        gap: 20px;
+    }
+
+    .card {
+        width: 90%;
+        margin: 0 auto;
+    }
+}

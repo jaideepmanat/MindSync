@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In / Sign Up</title>
+    <link rel="stylesheet" href="login.css">
+    <link rel="icon" type="image/x-icon" href="icon.png">
+</head>
+<body>
+    <div class="container" id="container">
+        <div class="form-container sign-up-container">
+            <form action="register.php" method="post" enctype="multipart/form-data">
+                <h1>Create Account</h1>
+                <div class="input-container">
+                    <input type="text" id="name" name="name" required placeholder=" " />
+                    <label for="name">Name</label>
+                </div>
+                <div class="input-container">
+                    <input type="email" id="email" name="email" required placeholder=" " />
+                    <label for="email">Email</label>
+                </div>
+                <div class="input-container">
+                    <input type="tel" id="mobile" name="mobile" required placeholder=" " />
+                    <label for="mobile">Mobile Number</label>
+                </div>
+                <div class="input-container">
+                    <select id="userType" name="userType" required>
+                        <option value="" disabled selected>Select User Type</option>
+                        <option value="normal">Normal User</option>
+                        <option value="consultant">Consultant</option>
+                    </select>
+                    <label for="userType">User Type</label>
+                </div>
+                <div class="input-container" id="consultantAreaContainer" style="display: none;" required>
+                    <select id="consultantArea" name="consultantArea">
+                        <option value="" disabled selected>Select Area of Expertise</option>
+                        <option value="severe_mental_health_conditions">Severe Mental Health Conditions</option>
+                        <option value="wellness_and_preventative_mental_health">Wellness and Preventative Mental Health</option>
+                        <option value="both">Both</option>
+                    </select>
+                    <label for="consultantArea">Area of Expertise</label>
+                </div>
+                <div class="input-container" id="proofUploadContainer" style="display: none;">
+                    <input type="file" id="proofUpload" name="proofUpload" accept=".pdf,.jpg,.jpeg,.png" />
+                    <label for="proofUpload">Upload Proof</label>
+                </div>                
+                <div class="input-container">
+                    <input type="password" id="password" name="password" required placeholder=" " />
+                    <label for="password">Password</label>
+                </div>
+                <div class="input-container">
+                    <input type="password" id="confirmPassword" name="confirmPassword" required placeholder=" " />
+                    <label for="confirmPassword">Confirm Password</label>
+                </div>
+                <button type="submit">Sign Up</button>
+                
+            </form>
+            
+            
+        </div>
+        <div class="form-container sign-in-container">
+            <form action="login.php" method="POST"> <!-- Updated action to point to login.php -->
+                <h1>Sign In</h1>
+                <div class="input-container">
+                    <input type="email" id="emailSignIn" name="emailSignIn" required placeholder=" " />
+                    <label for="emailSignIn">Email</label>
+                </div>
+                <div class="input-container">
+                    <input type="password" id="passwordSignIn" name="passwordSignIn" required placeholder=" " />
+                    <label for="passwordSignIn">Password</label>
+                </div>
+                <button type="submit">Sign In</button> <!-- Added type="submit" -->
+            </form>
+            
+        </div>
+        <div class="overlay-container">
+            <div class="overlay">
+                <div class="overlay-panel overlay-left">
+                    <h1>Welcome Back!</h1>
+                    <p>To keep connected with us please login with your personal info</p>
+                    <button class="ghost" id="signIn">Sign In</button>
+                </div>
+                <div class="overlay-panel overlay-right">
+                    <h1>Hello, Friend!</h1>
+                    <p>Enter your personal details and start your journey with us</p>
+                    <button class="ghost" id="signUp">Sign Up</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="login.js"></script>
+</body>
+</html>

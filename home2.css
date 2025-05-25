@@ -1,0 +1,210 @@
+/* General Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #121212; /* Sleek dark background */
+    color: #ffffff;
+    font-family: 'Poppins', sans-serif; /* Modern font */
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Navbar */
+nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: #0a0a0a;
+    position: relative;
+}
+
+nav .left h1 {
+    color: #00ff00;
+}
+
+nav .right {
+    display: flex;
+    position: relative;
+}
+
+nav .right .mailbox {
+    font-size: 30px;
+    margin-right: 25px; 
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+nav .right .mailbox:hover {
+    color: #00ff00e3;
+}
+
+nav .right .user-icon {
+    width: 40px;
+    cursor: pointer;
+}
+
+nav .right .dropdown {
+    display: none;
+    position: absolute;
+    top: 50px;
+    right: 10px; /* Adjusted for better fit */
+    background-color: #333;
+    padding: 10px;
+    border-radius: 5px;
+    width: 150px;
+    z-index: 100;
+}
+
+nav .right .dropdown a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    display: block;
+    padding: 5px 0;
+    transition: color 0.3s ease;
+}
+
+nav .right .dropdown a:hover {
+    color: #00ff00;
+}
+
+/* Container and Card Styles */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: stretch; /* Stretch cards to align height */
+    flex-wrap: nowrap; /* Keep cards in one row */
+    width: 100%;
+    max-width: 1200px; /* Constrain max width for large screens */
+    padding: 20px;
+    gap: 20px; /* Add spacing between cards */
+}
+
+.card {
+    background-color: #1e1e1e; /* Darker card background */
+    padding: 20px;
+    border-radius: 12px; /* Smoother corners */
+    text-align: center;
+    flex: 1 1 45%; /* Each card takes up 45% of the row */
+    box-shadow: 0 4px 10px rgba(0, 255, 0, 0.2); /* Subtle green shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px) scale(1.02); /* Smooth lift effect */
+    box-shadow: 0 8px 20px rgba(0, 255, 0, 0.5); /* Enhance hover shadow */
+    background-color: #262626; /* Slightly lighter on hover */
+}
+
+.card img {
+    width: 100%; 
+    aspect-ratio: 16 / 9; 
+    object-fit: cover;
+    margin-bottom: 15px; 
+    border-radius: 8px; /* Rounded edges */
+    filter: grayscale(50%); /* Partial grayscale for a modern look */
+    transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+.card img:hover {
+    filter: grayscale(0); /* Restore color on hover */
+    transform: scale(1.05); /* Subtle zoom on hover */
+}
+
+.card p {
+    margin-bottom: 15px;
+    font-size: 16px;
+    color: #d3d3d3; /* Softer white for text */
+    line-height: 1.5; /* Improve readability */
+}
+
+/* Button Styles */
+button {
+    padding: 12px 25px;
+    background-color: #00ff00;
+    border: none;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background-color: #1a1a1a;
+    color: #00ff00;
+    transform: scale(1.1); /* Slight scaling for hover effect */
+    border: 2px solid #00ff00;
+}
+
+.close-case {
+    background-color: red;
+    color: #fff;
+}
+
+.close-case:hover {
+    background-color: #ff0000;
+    color: #fff;
+    border: none;
+}
+
+/* Popup Styles */
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-content {
+    background-color: #333;
+    padding: 20px;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 600px;
+    color: #fff;
+}
+
+.popup-content h3 {
+    color: #00ff00;
+}
+
+table {
+    width: 100%;
+    margin-top: 10px;
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid #555;
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .container {
+        flex-wrap: wrap; /* Allow cards to wrap on smaller screens */
+        gap: 15px; /* Adjust spacing between rows */
+    }
+
+    .card {
+        flex: 1 1 100%; /* Each card takes up full width on smaller screens */
+    }
+}

@@ -1,0 +1,169 @@
+/* Reset Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body, html {
+    height: 100%;
+}
+
+body {
+    background-color: #1a1a1a;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 80px;
+    min-height: 100vh;
+}
+
+/* Navbar */
+nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: #0a0a0a;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
+
+nav .left h1 {
+    color: #00ff00;
+}
+
+nav .right {
+    display: flex;
+    position: relative;
+    align-items: center;
+}
+
+nav .right .mailbox {
+    font-size: 30px;
+    margin-right: 25px;
+    cursor: pointer;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+nav .right .mailbox:hover {
+    color: #00ff00;
+    transform: scale(1.1);
+}
+
+nav .right .user-icon {
+    width: 40px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+nav .right .user-icon:hover {
+    transform: scale(1.1);
+}
+
+nav .right .dropdown {
+    display: none;
+    position: absolute;
+    top: 50px;
+    right: 0;
+    background-color: #333;
+    padding: 10px;
+    border-radius: 5px;
+    width: 150px;
+}
+
+nav .right .dropdown a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    display: block;
+    padding: 5px 0;
+    transition: color 0.3s ease;
+}
+
+nav .right .dropdown a:hover {
+    color: #00ff00;
+}
+
+/* Predictions Section */
+.predictions {
+    width: 90%;
+    max-width: 800px;
+    margin: 100px auto 20px; /* Adjusted for spacing */
+    padding: 20px;
+    background-color: #262626;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 255, 0, 0.2);
+}
+
+.predictions h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #00ff00;
+}
+
+/* Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+thead {
+    background-color: #333;
+    color: #00ff00;
+}
+
+th, td {
+    padding: 10px 15px;
+    border-bottom: 1px solid #444;
+}
+
+th {
+    text-align: left; /* Align table headers to the left */
+}
+
+tbody tr {
+    transition: background-color 0.3s ease;
+}
+
+tbody tr:hover {
+    background-color: rgba(0, 255, 0, 0.1); /* Subtle hover effect */
+}
+
+/* Left-align the "Time" column */
+td:nth-child(1) {
+    text-align: left; /* Left-align for timestamps */
+}
+
+/* Color-coded predictions */
+td:nth-child(2) {
+    font-weight: bold;
+    text-align: center; /* Keep predictions centered */
+}
+
+td:nth-child(2):contains("High") {
+    color: #ff4d4d; /* Red for High */
+}
+
+td:nth-child(2):contains("Low") {
+    color: #4d79ff; /* Blue for Low */
+}
+
+td:nth-child(2):contains("Mid") {
+    color: #ffc107; /* Yellow for Mid */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .predictions {
+        padding: 15px;
+    }
+
+    th, td {
+        font-size: 14px;
+        padding: 8px 10px;
+    }
+}

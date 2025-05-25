@@ -1,0 +1,124 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #1e1e1e;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 80px; /* Default padding */
+    min-height: 100vh;
+}
+
+/* Navbar */
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 25px;
+    background-color: #0a0a0a;
+    z-index: 1000;
+}
+
+nav .left h1 {
+    color: #00ff00;
+}
+
+nav .right {
+    position: relative;
+}
+
+nav .right .user-icon {
+    width: 40px;
+    cursor: pointer;
+}
+
+nav .right .dropdown {
+    display: none;
+    position: absolute;
+    top: 50px;
+    right: 0;
+    background-color: #333;
+    padding: 10px;
+    border-radius: 5px;
+    width: 150px;
+}
+
+nav .right .dropdown a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    display: block;
+    padding: 5px 0;
+}
+
+nav .right .dropdown a:hover {
+    color: #00ff00;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #1e1e1e;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+.card {
+    background-color: #262626;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 500px;
+}
+h2 {
+    color: #00ff00;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+p {
+    font-size: 1.2em;
+    color: white;
+    margin-bottom: 30px;
+}
+.button {
+    padding: 10px 16px;
+    background-color: #00ff00;
+    color: rgb(0, 0, 0);
+    border: none;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #1a1a1a;
+    color: #00ff00;
+    border: 2px solid #00ff00;
+}
+/* Responsive Adjustments */
+@media (max-width: 600px) {
+    body {
+        padding-top: 100px; /* Adjusted for mobile */
+    }
+}
+
+@media (min-width: 601px) and (max-width: 1200px) {
+    body {
+        padding-top: 100px; /* Adjusted for tablets */
+    }
+}

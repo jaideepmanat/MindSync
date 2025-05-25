@@ -1,0 +1,226 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #121212; /* Sleek dark theme */
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 80px;
+    min-height: 100vh;
+}
+
+/* Navbar */
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 25px;
+    background-color: #0a0a0a;
+    z-index: 1000;
+}
+
+nav .left h1 {
+    color: #00ff00;
+}
+
+nav .right {
+    display: flex;
+    position: relative;
+}
+
+nav .right .mailbox {
+    font-size: 30px;
+    margin-right: 25px; 
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+nav .right .mailbox:hover {
+    color: #00ff00e3;
+}
+
+nav .right .user-icon {
+    width: 40px;
+    cursor: pointer;
+}
+
+nav .right .dropdown {
+    display: none;
+    position: absolute;
+    top: 50px;
+    right: 0;
+    background-color: #333;
+    padding: 10px;
+    border-radius: 5px;
+    width: 150px;
+}
+
+nav .right .dropdown a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    display: block;
+    padding: 5px 0;
+}
+
+nav .right .dropdown a:hover {
+    color: #00ff00;
+}
+
+/* Main Content */
+.card {
+    width: 90%;
+    max-width: 800px;
+    background-color: #1e1e1e; /* Sleek card background */
+    border-radius: 12px; /* Smooth corners */
+    box-shadow: 0 4px 15px rgba(0, 255, 0, 0.3); /* Subtle green glow */
+    padding: 25px;
+    text-align: left;
+    margin-top: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0, 255, 0, 0.5); /* Enhanced hover effect */
+}
+
+.card h2 {
+    font-size: 24px;
+    color: #00ff00;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Question Section */
+.question {
+    margin: 15px 0;
+    padding: 15px;
+    background-color: #262626;
+    border-radius: 8px;
+    border-left: 5px solid #00ff00; /* Green accent */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.question:hover {
+    background-color: #303030;
+    transform: scale(1.01); /* Subtle scaling effect */
+}
+
+.question h3 {
+    font-size: 18px;
+    margin-bottom: 8px;
+    color: #00ff00; /* Highlight question titles */
+    font-weight: bold;
+}
+
+.question p {
+    font-size: 15px;
+    margin-bottom: 10px;
+    color: #d3d3d3; /* Softer text color */
+}
+
+/* Reply Section */
+.reply {
+    padding: 15px;
+    background-color: #333;
+    border-left: 5px solid #28a745; /* Green border for replies */
+    margin-top: 10px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.reply:hover {
+    background-color: #3e3e3e;
+}
+
+.reply h4 {
+    font-size: 16px;
+    margin-bottom: 8px;
+    color: #00ff00;
+}
+
+.reply p {
+    font-size: 14px;
+    margin: 5px 0;
+    color: #cfcfcf; /* Softer white */
+}
+
+/* Reply Form */
+.reply-form {
+    margin-top: 15px;
+}
+
+.reply-form textarea {
+    width: 100%;
+    height: 100px;
+    padding: 12px;
+    color: white;
+    background-color: #2a2a2a;
+    border: 1px solid #00ff0050; /* Subtle green border */
+    border-radius: 8px;
+    margin-bottom: 12px;
+    font-size: 14px;
+    resize: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.reply-form textarea:focus {
+    background-color: #333;
+    outline: none;
+    transform: scale(1.02); /* Subtle scaling on focus */
+}
+
+.button {
+    padding: 12px 20px;
+    background-color: #00ff00;
+    color: black;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.button:hover {
+    background-color: #1a1a1a;
+    color: #00ff00;
+    transform: scale(1.05); /* Slight scaling effect on hover */
+    border: 2px solid #00ff00;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 600px) {
+    body {
+        padding-top: 100px;
+    }
+
+    .card {
+        width: 95%; /* Adjust card width for small screens */
+    }
+
+    .reply-form textarea {
+        height: 80px; /* Reduce textarea height for small screens */
+    }
+}
+
+@media (min-width: 601px) and (max-width: 1200px) {
+    body {
+        padding-top: 100px;
+    }
+
+    .card {
+        width: 90%;
+    }
+}
